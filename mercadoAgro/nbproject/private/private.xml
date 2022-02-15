@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/mercadoAgro/src/mercadoagro/producto.java</file>
-            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/mercadoAgro/src/mercadoagro/detalle_venta.java</file>
-            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/mercadoAgro/src/mercadoagro/usuario.java</file>
-            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/mercadoAgro/src/mercadoagro/venta.java</file>
+            <file>file:/C:/Users/SENA/Documents/Repositorio/mercadoAgro/mercadoAgro/src/GUI/ventavista.java</file>
+            <file>file:/C:/Users/SENA/Documents/Repositorio/mercadoAgro/mercadoAgro/src/GUI/usuariovista.java</file>
+            <file>file:/C:/Users/SENA/Documents/Repositorio/mercadoAgro/mercadoAgro/src/GUI/iniciovista.java</file>
         </group>
     </open-files>
 </project-private>

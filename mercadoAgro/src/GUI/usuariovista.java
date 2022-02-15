@@ -28,11 +28,10 @@ public class usuariovista extends javax.swing.JFrame {
     private void initComponents() {
 
         bg = new javax.swing.JPanel();
+        textbtentrar = new javax.swing.JLabel();
         passtxt = new javax.swing.JPasswordField();
         jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        textbtentrar = new javax.swing.JLabel();
-        btentrar = new javax.swing.JPanel();
         usuario1 = new javax.swing.JLabel();
         usertxt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -45,11 +44,22 @@ public class usuariovista extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
 
         bg.setMinimumSize(new java.awt.Dimension(800, 600));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        textbtentrar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        textbtentrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        textbtentrar.setText("entrar");
+        textbtentrar.setToolTipText("");
+        textbtentrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        textbtentrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                textbtentrarMouseClicked(evt);
+            }
+        });
+        bg.add(textbtentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 480, 110, 40));
 
         passtxt.setText("********");
         passtxt.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -57,10 +67,15 @@ public class usuariovista extends javax.swing.JFrame {
                 passtxtMousePressed(evt);
             }
         });
-        bg.add(passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 370, 40));
-        bg.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 370, 40));
+        passtxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passtxtActionPerformed(evt);
+            }
+        });
+        bg.add(passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, 370, 40));
+        bg.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, 370, 40));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("X");
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -77,39 +92,9 @@ public class usuariovista extends javax.swing.JFrame {
         });
         bg.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 0, 40, 40));
 
-        textbtentrar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        textbtentrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        textbtentrar.setText("entrar");
-        textbtentrar.setToolTipText("");
-        textbtentrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        textbtentrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                textbtentrarMouseClicked(evt);
-            }
-        });
-        bg.add(textbtentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 480, 110, 40));
-
-        btentrar.setBackground(new java.awt.Color(217, 175, 135));
-        btentrar.setToolTipText("");
-        btentrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btentrar.setName(""); // NOI18N
-
-        javax.swing.GroupLayout btentrarLayout = new javax.swing.GroupLayout(btentrar);
-        btentrar.setLayout(btentrarLayout);
-        btentrarLayout.setHorizontalGroup(
-            btentrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 110, Short.MAX_VALUE)
-        );
-        btentrarLayout.setVerticalGroup(
-            btentrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
-        );
-
-        bg.add(btentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 480, 110, 40));
-
         usuario1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         usuario1.setText("usuario");
-        bg.add(usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, -1, -1));
+        bg.add(usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, -1, -1));
 
         usertxt.setForeground(new java.awt.Color(204, 204, 204));
         usertxt.setText("ingrese su nombre de usuario");
@@ -124,7 +109,7 @@ public class usuariovista extends javax.swing.JFrame {
                 usertxtActionPerformed(evt);
             }
         });
-        bg.add(usertxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 370, 40));
+        bg.add(usertxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 370, 40));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -134,7 +119,7 @@ public class usuariovista extends javax.swing.JFrame {
         usuario.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         usuario.setText("contraseña");
         usuario.setToolTipText("");
-        bg.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, -1, -1));
+        bg.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, -1, -1));
 
         logoempresa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logoempresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenempresa.png"))); // NOI18N
@@ -150,11 +135,11 @@ public class usuariovista extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 40));
@@ -174,11 +159,11 @@ public class usuariovista extends javax.swing.JFrame {
         head.setLayout(headLayout);
         headLayout.setHorizontalGroup(
             headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         headLayout.setVerticalGroup(
             headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         bg.add(head, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 40));
@@ -259,6 +244,10 @@ public class usuariovista extends javax.swing.JFrame {
         
     }//GEN-LAST:event_textbtentrarMouseClicked
 
+    private void passtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passtxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passtxtActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -297,7 +286,6 @@ public class usuariovista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
-    private javax.swing.JPanel btentrar;
     private javax.swing.JLabel fondo;
     private javax.swing.JPanel head;
     private javax.swing.JLabel jLabel1;
