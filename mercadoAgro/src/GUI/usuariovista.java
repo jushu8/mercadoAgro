@@ -97,7 +97,7 @@ public class usuariovista extends javax.swing.JFrame {
         bg.add(usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, -1, -1));
 
         usertxt.setForeground(new java.awt.Color(204, 204, 204));
-        usertxt.setText("ingrese su nombre de usuario");
+        usertxt.setText(" ingrese su nombre de usuario");
         usertxt.setBorder(null);
         usertxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
