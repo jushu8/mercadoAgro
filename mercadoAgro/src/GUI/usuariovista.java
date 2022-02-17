@@ -27,226 +27,79 @@ public class usuariovista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bg = new javax.swing.JPanel();
-        textbtentrar = new javax.swing.JLabel();
-        passtxt = new javax.swing.JPasswordField();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        usuario1 = new javax.swing.JLabel();
-        usertxt = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        usuario = new javax.swing.JLabel();
-        logoempresa = new javax.swing.JLabel();
-        fondo = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        head = new javax.swing.JPanel();
+        imgfondo = new javax.swing.JPanel();
+        btnentrar = new javax.swing.JLabel();
+        checkbox1 = new java.awt.Checkbox();
+        imglogo = new javax.swing.JLabel();
+        usuario = new javax.swing.JTextField();
+        contraseña = new javax.swing.JPasswordField();
+        lgusuario = new javax.swing.JLabel();
+        lgpassword = new javax.swing.JLabel();
+        fondousu = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setUndecorated(true);
         setResizable(false);
 
-        bg.setMinimumSize(new java.awt.Dimension(800, 600));
-        bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        imgfondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        textbtentrar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        textbtentrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        textbtentrar.setText("entrar");
-        textbtentrar.setToolTipText("");
-        textbtentrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        textbtentrar.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnentrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btninicio2.png"))); // NOI18N
+        btnentrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnentrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                textbtentrarMouseClicked(evt);
+                btnentrarMouseClicked(evt);
             }
         });
-        bg.add(textbtentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 480, 110, 40));
+        imgfondo.add(btnentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 130, 30));
 
-        passtxt.setText("********");
-        passtxt.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                passtxtMousePressed(evt);
-            }
-        });
-        passtxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passtxtActionPerformed(evt);
-            }
-        });
-        bg.add(passtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, 370, 40));
-        bg.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, 370, 40));
+        checkbox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        checkbox1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        checkbox1.setLabel("Recuerdame");
+        imgfondo.add(checkbox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("X");
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel2MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel2MouseExited(evt);
-            }
-        });
-        bg.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 0, 40, 40));
+        imglogo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        imglogo.setText("LOGO");
+        imgfondo.add(imglogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, -1, -1));
 
-        usuario1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        usuario1.setText("usuario");
-        bg.add(usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, -1, -1));
-
-        usertxt.setForeground(new java.awt.Color(204, 204, 204));
-        usertxt.setText(" ingrese su nombre de usuario");
-        usertxt.setBorder(null);
-        usertxt.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                usertxtMousePressed(evt);
-            }
-        });
-        usertxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usertxtActionPerformed(evt);
-            }
-        });
-        bg.add(usertxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 370, 40));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("iniciar sesion");
-        bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 270, 280, -1));
-
-        usuario.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        usuario.setText("contraseña");
+        usuario.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        usuario.setForeground(new java.awt.Color(204, 204, 204));
+        usuario.setText("Ingrese Usuario");
         usuario.setToolTipText("");
-        bg.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, -1, -1));
+        imgfondo.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 145, 168, 35));
 
-        logoempresa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logoempresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagenempresa.png"))); // NOI18N
-        bg.add(logoempresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 250));
+        contraseña.setForeground(new java.awt.Color(204, 204, 204));
+        contraseña.setText("******");
+        imgfondo.add(contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 211, 168, 35));
 
-        fondo.setBackground(new java.awt.Color(255, 255, 255));
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondotienda2.jpg"))); // NOI18N
-        bg.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
+        lgusuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lgusuario2.png"))); // NOI18N
+        imgfondo.add(lgusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 145, -1, 35));
 
-        jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lgpassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contrasena2.png"))); // NOI18N
+        imgfondo.add(lgpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 211, -1, 35));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 40));
-
-        head.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                headMouseDragged(evt);
-            }
-        });
-        head.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                headMousePressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout headLayout = new javax.swing.GroupLayout(head);
-        head.setLayout(headLayout);
-        headLayout.setHorizontalGroup(
-            headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        headLayout.setVerticalGroup(
-            headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        bg.add(head, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 40));
+        fondousu.setBackground(new java.awt.Color(51, 255, 255));
+        fondousu.setForeground(new java.awt.Color(51, 255, 255));
+        imgfondo.add(fondousu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 501, 340));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(imgfondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(imgfondo, javax.swing.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void usertxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usertxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_usertxtActionPerformed
-
-    private void headMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headMousePressed
+    private void btnentrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnentrarMouseClicked
         
-        xMouse = evt.getX();
-        yMouse = evt.getY();
-        
-    }//GEN-LAST:event_headMousePressed
-
-    private void headMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headMouseDragged
-       
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x - xMouse,y - yMouse);
-    }//GEN-LAST:event_headMouseDragged
-
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        
-        System.exit(0);
-            
-    }//GEN-LAST:event_jLabel2MouseClicked
-
-    private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
-        
-    }//GEN-LAST:event_jLabel2MouseEntered
-
-    private void jLabel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseExited
-
-    }//GEN-LAST:event_jLabel2MouseExited
-
-    private void usertxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usertxtMousePressed
-      if(usertxt.getText().equals("ingrese su nombre de usuario")){      
-        usertxt.setText("");
-        usertxt.setForeground(Color.black);
-      }
-      if(String.valueOf(passtxt.getPassword()).isEmpty()){ 
-        passtxt.setText("********");
-        passtxt.setForeground(Color.gray);
-      }   
-    }//GEN-LAST:event_usertxtMousePressed
-
-    private void passtxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passtxtMousePressed
-        if(String.valueOf(passtxt.getPassword()).equals("********")){
-        usertxt.setText("");
-        usertxt.setForeground(Color.gray);
-        }
-        if(usertxt.getText().isEmpty()){
-        passtxt.setText("ingrese su nombre de usuario");
-        passtxt.setForeground(Color.black);
-        } 
-    }//GEN-LAST:event_passtxtMousePressed
-
-    private void textbtentrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textbtentrarMouseClicked
-        
-        javax.swing.JOptionPane.showMessageDialog(this,"Intento de login con los datos:\nUsuario: " 
-                + usertxt.getText()+ "\nContraseña " + String.valueOf(passtxt.getPassword()), "LOGIN",
-                javax.swing.JOptionPane.INFORMATION_MESSAGE);
-        
-    }//GEN-LAST:event_textbtentrarMouseClicked
-
-    private void passtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passtxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passtxtActionPerformed
+     
+    }//GEN-LAST:event_btnentrarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -285,18 +138,14 @@ public class usuariovista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel bg;
-    private javax.swing.JLabel fondo;
-    private javax.swing.JPanel head;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JLabel logoempresa;
-    private javax.swing.JPasswordField passtxt;
-    private javax.swing.JLabel textbtentrar;
-    private javax.swing.JTextField usertxt;
-    private javax.swing.JLabel usuario;
-    private javax.swing.JLabel usuario1;
+    private javax.swing.JLabel btnentrar;
+    private java.awt.Checkbox checkbox1;
+    private javax.swing.JPasswordField contraseña;
+    private javax.swing.JLabel fondousu;
+    private javax.swing.JPanel imgfondo;
+    private javax.swing.JLabel imglogo;
+    private javax.swing.JLabel lgpassword;
+    private javax.swing.JLabel lgusuario;
+    private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }
