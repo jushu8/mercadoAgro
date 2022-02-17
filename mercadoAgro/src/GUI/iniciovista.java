@@ -55,64 +55,101 @@ public class iniciovista extends javax.swing.JFrame {
 
         imgreporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/facturacion2.png"))); // NOI18N
         imgreporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imgreporte.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                imgreporteMouseClicked(evt);
+            }
+        });
         jpingreso.add(imgreporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 203, -1, -1));
 
         imgcategoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/estadotienda2.png"))); // NOI18N
         imgcategoria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imgcategoria.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                imgcategoriaMouseClicked(evt);
+            }
+        });
         jpingreso.add(imgcategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 264, -1, -1));
 
         imgproveedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/proveedor2.png"))); // NOI18N
         imgproveedor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imgproveedor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                imgproveedorMouseClicked(evt);
+            }
+        });
         jpingreso.add(imgproveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 325, -1, -1));
 
         imgventas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ventas2.png"))); // NOI18N
         imgventas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imgventas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                imgventasMouseClicked(evt);
+            }
+        });
         jpingreso.add(imgventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 142, -1, -1));
 
         imgclientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contactos2.png"))); // NOI18N
         imgclientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imgclientes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                imgclientesMouseClicked(evt);
+            }
+        });
         jpingreso.add(imgclientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 386, -1, -1));
 
         imginventario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/inventario2.png"))); // NOI18N
+        imginventario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imginventario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                imginventarioMouseClicked(evt);
+            }
+        });
         jpingreso.add(imginventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 447, -1, -1));
 
         reportetxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         reportetxt.setText("Reportes");
         reportetxt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jpingreso.add(reportetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 203, 113, 50));
+        jpingreso.add(reportetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-115, 203, 113, 50));
 
         ventastxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ventastxt.setText("Ventas");
         ventastxt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jpingreso.add(ventastxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 142, 113, 50));
+        jpingreso.add(ventastxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-115, 142, 113, 50));
 
         categoriatxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         categoriatxt.setText("Categorias");
         categoriatxt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jpingreso.add(categoriatxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 264, 113, 50));
+        jpingreso.add(categoriatxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-115, 264, 113, 50));
 
         proveedortxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         proveedortxt.setText("Proveedores");
         proveedortxt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jpingreso.add(proveedortxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 325, -1, 50));
+        jpingreso.add(proveedortxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-115, 325, -1, 50));
 
         clientestxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         clientestxt.setText("Clientes");
         clientestxt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jpingreso.add(clientestxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 386, 113, 50));
+        jpingreso.add(clientestxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-115, 386, 113, 50));
 
         invtxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         invtxt.setText("Inventario");
         invtxt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jpingreso.add(invtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 447, 113, 50));
+        jpingreso.add(invtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-115, 447, 113, 50));
 
         imgusuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/usuarios2.png"))); // NOI18N
+        imgusuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imgusuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                imgusuarioMouseClicked(evt);
+            }
+        });
         jpingreso.add(imgusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 508, -1, -1));
 
         usuariotxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         usuariotxt.setText("Usuarios");
         usuariotxt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jpingreso.add(usuariotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 508, 113, 50));
+        jpingreso.add(usuariotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-115, 508, 113, 50));
 
         btnmenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/menu2.png"))); // NOI18N
         btnmenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -126,11 +163,11 @@ public class iniciovista extends javax.swing.JFrame {
         getContentPane().add(jpingreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 640));
 
         btncerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/apagar.png"))); // NOI18N
-        btncerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btncerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(btncerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 0, -1, 30));
 
         btnminimi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/minimizar.png"))); // NOI18N
-        btnminimi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnminimi.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(btnminimi, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 0, -1, -1));
 
         jphead.setBackground(new java.awt.Color(0, 153, 204));
@@ -168,9 +205,70 @@ public class iniciovista extends javax.swing.JFrame {
 
     private void btnmenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnmenuMouseClicked
         
-        AnimationClass ventas = new AnimationClass();
-        ventas.jLabelXRight(ABORT, ERROR, 10, 5, imgventas);
     }//GEN-LAST:event_btnmenuMouseClicked
+
+    private void imgventasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgventasMouseClicked
+        
+        AnimationClass ventas = new AnimationClass();
+        ventas.jLabelXRight(-115, 70, 10, 5, ventastxt);
+        
+        AnimationClass ventass = new AnimationClass();
+        ventass.jLabelXLeft(70, -115, 10, 5, ventastxt);
+    }//GEN-LAST:event_imgventasMouseClicked
+
+    private void imgreporteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgreporteMouseClicked
+      
+        AnimationClass reporte = new AnimationClass();
+        reporte.jLabelXRight(-115, 70, 10, 5, reportetxt);
+        
+        AnimationClass reportes = new AnimationClass();
+        reportes.jLabelXLeft(70, -115, 10, 5, reportetxt);
+    }//GEN-LAST:event_imgreporteMouseClicked
+
+    private void imgcategoriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgcategoriaMouseClicked
+
+        AnimationClass catego = new AnimationClass();
+        catego.jLabelXRight(-115, 70, 10, 5, categoriatxt);
+        
+        AnimationClass categor = new AnimationClass();
+        categor.jLabelXLeft(70, -115, 10, 5, categoriatxt);
+    }//GEN-LAST:event_imgcategoriaMouseClicked
+
+    private void imgproveedorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgproveedorMouseClicked
+        
+        AnimationClass prove = new AnimationClass();
+        prove.jLabelXRight(-115, 70, 10, 5, proveedortxt);
+        
+        AnimationClass provee = new AnimationClass();
+        provee.jLabelXLeft(70, -115, 10, 5, proveedortxt);
+    }//GEN-LAST:event_imgproveedorMouseClicked
+
+    private void imgclientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgclientesMouseClicked
+       
+        AnimationClass cliente = new AnimationClass();
+        cliente.jLabelXRight(-115, 70, 10, 5, clientestxt);
+        
+        AnimationClass clientes = new AnimationClass();
+        clientes.jLabelXLeft(70, -115, 10, 5, clientestxt);
+    }//GEN-LAST:event_imgclientesMouseClicked
+
+    private void imginventarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imginventarioMouseClicked
+       
+        AnimationClass inv = new AnimationClass();
+        inv.jLabelXRight(-115, 70, 10, 5, invtxt);
+        
+        AnimationClass inve = new AnimationClass();
+        inve.jLabelXLeft(70, -115, 10, 5, invtxt);
+    }//GEN-LAST:event_imginventarioMouseClicked
+
+    private void imgusuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgusuarioMouseClicked
+        
+        AnimationClass usuario = new AnimationClass();
+        usuario.jLabelXRight(-115, 70, 10, 5, usuariotxt);
+        
+        AnimationClass usuarios = new AnimationClass();
+        usuarios.jLabelXLeft(70, -115, 10, 5, usuariotxt);
+    }//GEN-LAST:event_imgusuarioMouseClicked
 
     /**
      * @param args the command line arguments
