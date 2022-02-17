@@ -6,6 +6,7 @@
 package GUI;
 
 import AppPackage.AnimationClass;
+import javax.swing.JOptionPane;
 
 public class iniciovista extends javax.swing.JFrame {
 
@@ -164,10 +165,20 @@ public class iniciovista extends javax.swing.JFrame {
 
         btncerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/apagar.png"))); // NOI18N
         btncerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btncerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btncerrarMouseClicked(evt);
+            }
+        });
         getContentPane().add(btncerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 0, -1, 30));
 
         btnminimi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/minimizar.png"))); // NOI18N
         btnminimi.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnminimi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnminimiMouseClicked(evt);
+            }
+        });
         getContentPane().add(btnminimi, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 0, -1, -1));
 
         jphead.setBackground(new java.awt.Color(0, 153, 204));
@@ -269,6 +280,25 @@ public class iniciovista extends javax.swing.JFrame {
         AnimationClass usuarios = new AnimationClass();
         usuarios.jLabelXLeft(70, -115, 10, 5, usuariotxt);
     }//GEN-LAST:event_imgusuarioMouseClicked
+
+    private void btncerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrarMouseClicked
+        
+        try{
+            int dialogButton =  JOptionPane.YES_NO_OPTION;
+            int result = JOptionPane.showConfirmDialog(null,"Desea cerrar el sistema?", "EXIT", dialogButton);
+            if(result == 0){
+                System.exit(0);
+            }
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(this, e);
+        }
+            
+    }//GEN-LAST:event_btncerrarMouseClicked
+
+    private void btnminimiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimiMouseClicked
+        
+        this.setState(GUI.iniciovista.ICONIFIED);
+    }//GEN-LAST:event_btnminimiMouseClicked
 
     /**
      * @param args the command line arguments
