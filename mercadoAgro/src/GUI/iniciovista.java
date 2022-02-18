@@ -9,15 +9,46 @@ import AppPackage.AnimationClass;
 import java.awt.Desktop;
 import java.net.URI;
 import javax.swing.JOptionPane;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
-public class iniciovista extends javax.swing.JFrame {
+public class iniciovista extends javax.swing.JFrame implements Runnable{
+    String hora,minutos,segundos;
+    Thread hilo;
+    
 
     /** Creates new form iniciovista */
     public iniciovista() {
         initComponents();
         this.setLocationRelativeTo(null);
+        fecha.setText(fecha());
+        hilo=new Thread(this);
+        hilo.start();
+        setVisible(true);
+        
     }
 
+    public void hora(){
+        
+        Calendar calendario=new GregorianCalendar();
+        Date horaactual=new Date();
+        calendario.setTime(horaactual);
+        hora=calendario.get(Calendar.HOUR_OF_DAY)>9?""+calendario.get(Calendar.HOUR_OF_DAY):"0"+calendario.get(Calendar.HOUR_OF_DAY);
+        minutos=calendario.get(Calendar.MINUTE)>9?""+calendario.get(Calendar.MINUTE):"0"+calendario.get(Calendar.MINUTE);
+        segundos=calendario.get(Calendar.SECOND)>9?""+calendario.get(Calendar.SECOND):"0"+calendario.get(Calendar.SECOND);
+    }
+    
+    public void run(){
+        
+        Thread current=Thread.currentThread();
+        while(current==hilo){
+            hora();
+            horatxt.setText(hora+":"+minutos+":"+segundos);
+        }
+
+    }
+    
     public void OpenInternet(){
         try{
             Desktop.getDesktop().browse(URI.create("www.google.com"));
@@ -58,10 +89,18 @@ public class iniciovista extends javax.swing.JFrame {
         btninternet = new javax.swing.JLabel();
         imgventas1 = new javax.swing.JLabel();
         hogartxt = new javax.swing.JLabel();
+        usuariotxtm = new javax.swing.JLabel();
+        fechayhoratxt = new javax.swing.JLabel();
+        nombr = new javax.swing.JLabel();
+        fecha = new javax.swing.JLabel();
+        horatxt = new javax.swing.JLabel();
+        fondoico2 = new javax.swing.JLabel();
         jpmostrar = new javax.swing.JPanel();
+        imgmostrarbg = new javax.swing.JLabel();
         jphead = new javax.swing.JPanel();
         btncerrar = new javax.swing.JLabel();
         btnminimi = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -169,7 +208,7 @@ public class iniciovista extends javax.swing.JFrame {
         usuariotxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         imgventas.add(usuariotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-115, 508, 113, 50));
 
-        btnmenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/menu2.png"))); // NOI18N
+        btnmenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/menu3.png"))); // NOI18N
         btnmenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnmenu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -219,9 +258,35 @@ public class iniciovista extends javax.swing.JFrame {
         hogartxt.setText("INICIO");
         imgventas.add(hogartxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-115, 80, 113, 50));
 
+        usuariotxtm.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        usuariotxtm.setText("Usuario");
+        imgventas.add(usuariotxtm, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 580, 80, -1));
+
+        fechayhoratxt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        fechayhoratxt.setText("Hora y Fecha");
+        imgventas.add(fechayhoratxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, 80, -1));
+
+        nombr.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        nombr.setText("nombre usuario");
+        imgventas.add(nombr, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 580, 70, -1));
+
+        fecha.setText("DD/MM/YYYY");
+        imgventas.add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 610, 70, -1));
+
+        horatxt.setText("00:00:00");
+        imgventas.add(horatxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 610, -1, -1));
+
+        fondoico2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoico2.jpg"))); // NOI18N
+        imgventas.add(fondoico2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 640));
+
         getContentPane().add(imgventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 640));
 
         jpmostrar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        imgmostrarbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoico5.png"))); // NOI18N
+        imgmostrarbg.setToolTipText("");
+        jpmostrar.add(imgmostrarbg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 620));
+
         getContentPane().add(jpmostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 740, 610));
 
         jphead.setBackground(new java.awt.Color(0, 153, 204));
@@ -247,11 +312,20 @@ public class iniciovista extends javax.swing.JFrame {
         });
         jphead.add(btnminimi, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 0, -1, -1));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoico3.jpg"))); // NOI18N
+        jphead.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 30));
+
         getContentPane().add(jphead, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 740, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public static String fecha(){
+        Date fecha= new Date();
+        SimpleDateFormat formatofecha=new SimpleDateFormat ("dd/MM/YYYY");
+        return formatofecha.format(fecha);
+    }
+    
     private void btnmenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnmenuMouseClicked
 
        AnimationClass internet = new AnimationClass();
@@ -432,22 +506,30 @@ public class iniciovista extends javax.swing.JFrame {
     private javax.swing.JLabel btnmusica;
     private javax.swing.JLabel categoriatxt;
     private javax.swing.JLabel clientestxt;
+    private javax.swing.JLabel fecha;
+    private javax.swing.JLabel fechayhoratxt;
+    private javax.swing.JLabel fondoico2;
     private javax.swing.JLabel hogartxt;
+    private javax.swing.JLabel horatxt;
     private javax.swing.JLabel imgcategoria;
     private javax.swing.JLabel imgclientes;
     private javax.swing.JLabel imghogar;
     private javax.swing.JLabel imginventario;
+    private javax.swing.JLabel imgmostrarbg;
     private javax.swing.JLabel imgproveedor;
     private javax.swing.JLabel imgreporte;
     private javax.swing.JLabel imgusuario;
     private javax.swing.JPanel imgventas;
     private javax.swing.JLabel imgventas1;
     private javax.swing.JLabel invtxt;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jphead;
     private javax.swing.JPanel jpmostrar;
+    private javax.swing.JLabel nombr;
     private javax.swing.JLabel proveedortxt;
     private javax.swing.JLabel reportetxt;
     private javax.swing.JLabel usuariotxt;
+    private javax.swing.JLabel usuariotxtm;
     private javax.swing.JLabel ventastxt;
     // End of variables declaration//GEN-END:variables
 

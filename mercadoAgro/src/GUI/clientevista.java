@@ -1,21 +1,40 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package GUI;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+
+
 /**
  *
- * @author SENA
+ * @author Antonio
  */
-public class clientevista extends javax.swing.JFrame {
+public class clientevista extends javax.swing.JPanel {
 
+    
     /**
-     * Creates new form cliente
+     * Creates new form Principal
      */
     public clientevista() {
         initComponents();
+        
     }
+    
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,58 +45,726 @@ public class clientevista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        body = new javax.swing.JPanel();
+        Title = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        Text3 = new javax.swing.JLabel();
+        pnombre_cliente = new javax.swing.JTextField();
+        jSeparator4 = new javax.swing.JSeparator();
+        Text6 = new javax.swing.JLabel();
+        snombre_cliente = new javax.swing.JTextField();
+        jSeparator7 = new javax.swing.JSeparator();
+        Text7 = new javax.swing.JLabel();
+        papellido_cliente = new javax.swing.JTextField();
+        jSeparator8 = new javax.swing.JSeparator();
+        Text8 = new javax.swing.JLabel();
+        sapellido_cliente = new javax.swing.JTextField();
+        jSeparator9 = new javax.swing.JSeparator();
+        Text9 = new javax.swing.JLabel();
+        cedula_cliente = new javax.swing.JTextField();
+        jSeparator10 = new javax.swing.JSeparator();
+        Text4 = new javax.swing.JLabel();
+        telefono_cliente = new javax.swing.JTextField();
+        jSeparator5 = new javax.swing.JSeparator();
+        Text11 = new javax.swing.JLabel();
+        correo_cliente = new javax.swing.JTextField();
+        jSeparator12 = new javax.swing.JSeparator();
+        Text12 = new javax.swing.JLabel();
+        direccion_cliente = new javax.swing.JTextField();
+        jSeparator13 = new javax.swing.JSeparator();
+        btnagregar = new javax.swing.JLabel();
+        btnbuscar = new javax.swing.JLabel();
+        btneditar = new javax.swing.JLabel();
+        btnmostrar = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setBackground(new java.awt.Color(255, 255, 255));
+        setMinimumSize(new java.awt.Dimension(750, 430));
+        setPreferredSize(new java.awt.Dimension(750, 430));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+        body.setBackground(new java.awt.Color(255, 255, 255));
+        body.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(clientevista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(clientevista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(clientevista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(clientevista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
+        Title.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Title.setText("Agregar, Buscar, Modificar y Mostrar Clientes");
+        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 620, -1));
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new clientevista().setVisible(true);
+        jSeparator3.setForeground(new java.awt.Color(51, 51, 51));
+        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 10, 290));
+
+        Text3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Text3.setText("Primer Nombre ");
+        add(Text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, -1));
+
+        pnombre_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        pnombre_cliente.setForeground(new java.awt.Color(102, 102, 102));
+        pnombre_cliente.setText("Ingrese el Primer Nombre del Cliente");
+        pnombre_cliente.setBorder(null);
+        pnombre_cliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnombre_clienteMousePressed(evt);
             }
         });
-    }
+        pnombre_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pnombre_clienteActionPerformed(evt);
+            }
+        });
+        pnombre_cliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                pnombre_clienteKeyTyped(evt);
+            }
+        });
+        add(pnombre_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 300, 30));
+
+        jSeparator4.setForeground(new java.awt.Color(51, 153, 255));
+        jSeparator4.setPreferredSize(new java.awt.Dimension(200, 10));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 250, 10));
+
+        Text6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Text6.setText("Segundo Nombre");
+        add(Text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 140, -1));
+
+        snombre_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        snombre_cliente.setForeground(new java.awt.Color(102, 102, 102));
+        snombre_cliente.setText("Ingrese el Segundo Nombre del Cliente");
+        snombre_cliente.setBorder(null);
+        snombre_cliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                snombre_clienteMousePressed(evt);
+            }
+        });
+        snombre_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                snombre_clienteActionPerformed(evt);
+            }
+        });
+        snombre_cliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                snombre_clienteKeyTyped(evt);
+            }
+        });
+        add(snombre_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 250, 30));
+
+        jSeparator7.setForeground(new java.awt.Color(51, 153, 255));
+        jSeparator7.setPreferredSize(new java.awt.Dimension(200, 10));
+        add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 250, 10));
+
+        Text7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Text7.setText("Primer Apellido");
+        add(Text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 190, -1));
+
+        papellido_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        papellido_cliente.setForeground(new java.awt.Color(102, 102, 102));
+        papellido_cliente.setText("Ingrese el Primer Apellido del Cliente");
+        papellido_cliente.setBorder(null);
+        papellido_cliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                papellido_clienteMousePressed(evt);
+            }
+        });
+        papellido_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                papellido_clienteActionPerformed(evt);
+            }
+        });
+        papellido_cliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                papellido_clienteKeyTyped(evt);
+            }
+        });
+        add(papellido_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 250, 30));
+
+        jSeparator8.setForeground(new java.awt.Color(51, 153, 255));
+        jSeparator8.setPreferredSize(new java.awt.Dimension(200, 10));
+        add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 250, 10));
+
+        Text8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Text8.setText("Segundo Apellido");
+        add(Text8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 150, -1));
+
+        sapellido_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        sapellido_cliente.setForeground(new java.awt.Color(102, 102, 102));
+        sapellido_cliente.setText("Ingrese el Segundo Apellido del Cliente");
+        sapellido_cliente.setBorder(null);
+        sapellido_cliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                sapellido_clienteMousePressed(evt);
+            }
+        });
+        sapellido_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sapellido_clienteActionPerformed(evt);
+            }
+        });
+        sapellido_cliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                sapellido_clienteKeyTyped(evt);
+            }
+        });
+        add(sapellido_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 250, 30));
+
+        jSeparator9.setForeground(new java.awt.Color(51, 153, 255));
+        jSeparator9.setPreferredSize(new java.awt.Dimension(200, 10));
+        add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 250, 10));
+
+        Text9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Text9.setText("Numero de Documento");
+        add(Text9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 80, 180, -1));
+
+        cedula_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        cedula_cliente.setForeground(new java.awt.Color(102, 102, 102));
+        cedula_cliente.setText("Ingrese el Numero de Documento del Cliente");
+        cedula_cliente.setBorder(null);
+        cedula_cliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                cedula_clienteMousePressed(evt);
+            }
+        });
+        cedula_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cedula_clienteActionPerformed(evt);
+            }
+        });
+        cedula_cliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cedula_clienteKeyTyped(evt);
+            }
+        });
+        add(cedula_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 100, 330, 30));
+
+        jSeparator10.setForeground(new java.awt.Color(51, 153, 255));
+        jSeparator10.setPreferredSize(new java.awt.Dimension(200, 10));
+        add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 280, 10));
+
+        Text4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Text4.setText("Telefono");
+        add(Text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 110, -1));
+
+        telefono_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        telefono_cliente.setForeground(new java.awt.Color(102, 102, 102));
+        telefono_cliente.setText("Ingrese el Telefono del Cliente");
+        telefono_cliente.setBorder(null);
+        telefono_cliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                telefono_clienteMousePressed(evt);
+            }
+        });
+        telefono_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                telefono_clienteActionPerformed(evt);
+            }
+        });
+        telefono_cliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                telefono_clienteKeyTyped(evt);
+            }
+        });
+        add(telefono_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 330, 30));
+
+        jSeparator5.setForeground(new java.awt.Color(51, 153, 255));
+        jSeparator5.setPreferredSize(new java.awt.Dimension(200, 10));
+        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 280, 10));
+
+        Text11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Text11.setText("Correo Electrónico");
+        add(Text11, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 180, -1));
+
+        correo_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        correo_cliente.setForeground(new java.awt.Color(102, 102, 102));
+        correo_cliente.setText("Ingrese el Correo Electronico del Cliente");
+        correo_cliente.setBorder(null);
+        correo_cliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                correo_clienteMousePressed(evt);
+            }
+        });
+        correo_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                correo_clienteActionPerformed(evt);
+            }
+        });
+        add(correo_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 330, 30));
+
+        jSeparator12.setForeground(new java.awt.Color(51, 153, 255));
+        jSeparator12.setPreferredSize(new java.awt.Dimension(200, 10));
+        add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 280, 10));
+
+        Text12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Text12.setText("Dirección");
+        add(Text12, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, 140, -1));
+
+        direccion_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        direccion_cliente.setForeground(new java.awt.Color(102, 102, 102));
+        direccion_cliente.setText("Ingrese la Dirección del Cliente");
+        direccion_cliente.setBorder(null);
+        direccion_cliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                direccion_clienteMousePressed(evt);
+            }
+        });
+        direccion_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                direccion_clienteActionPerformed(evt);
+            }
+        });
+        add(direccion_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 330, 30));
+
+        jSeparator13.setForeground(new java.awt.Color(51, 153, 255));
+        jSeparator13.setPreferredSize(new java.awt.Dimension(200, 10));
+        add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, 280, 10));
+
+        btnagregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnadduser.png"))); // NOI18N
+        btnagregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        add(btnagregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, -1, -1));
+
+        btnbuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnbuscar.png"))); // NOI18N
+        btnbuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        add(btnbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, -1, -1));
+
+        btneditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnedit.png"))); // NOI18N
+        btneditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        add(btneditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, -1, -1));
+
+        btnmostrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnmostrar.png"))); // NOI18N
+        btnmostrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        add(btnmostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, -1, -1));
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void pnombre_clienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnombre_clienteMousePressed
+    if (pnombre_cliente.getText().equals("Ingrese el Primer Nombre del Cliente")) {
+            pnombre_cliente.setText("");
+            pnombre_cliente.setForeground(Color.black);
+        }
+    
+    if (snombre_cliente.getText().isEmpty()) {
+            snombre_cliente.setText("Ingrese el Segundo Nombre del Cliente");
+            snombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (papellido_cliente.getText().isEmpty()) {
+            papellido_cliente.setText("Ingrese el Primer Apellido del Cliente");
+            papellido_cliente.setForeground(Color.gray);
+        }
+    
+    if (sapellido_cliente.getText().isEmpty()) {
+            sapellido_cliente.setText("Ingrese el Segundo Apellido del Cliente");
+            sapellido_cliente.setForeground(Color.gray);
+        }
+    
+    if (cedula_cliente.getText().isEmpty()) {
+            cedula_cliente.setText("Ingrese el Numero de Documento del Cliente");
+            cedula_cliente.setForeground(Color.gray);
+        }
+    
+    if (telefono_cliente.getText().isEmpty()) {
+            telefono_cliente.setText("Ingrese el Telefono del Cliente");
+            telefono_cliente.setForeground(Color.gray);
+        }
+    
+    if (correo_cliente.getText().isEmpty()) {
+            correo_cliente.setText("Ingrese el Correo Electronico del Cliente");
+            correo_cliente.setForeground(Color.gray);
+        }
+    
+    if (direccion_cliente.getText().isEmpty()) {
+            direccion_cliente.setText("Ingrese la Dirección del Cliente");
+            direccion_cliente.setForeground(Color.gray);
+        }
+    }//GEN-LAST:event_pnombre_clienteMousePressed
+
+    private void pnombre_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pnombre_clienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pnombre_clienteActionPerformed
+
+    private void snombre_clienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_snombre_clienteMousePressed
+    if (snombre_cliente.getText().equals("Ingrese el Segundo Nombre del Cliente")) {
+            snombre_cliente.setText("");
+            snombre_cliente.setForeground(Color.black);
+        }
+    
+    if (pnombre_cliente.getText().isEmpty()) {
+            pnombre_cliente.setText("Ingrese el Primer Nombre del Cliente");
+            pnombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (papellido_cliente.getText().isEmpty()) {
+            papellido_cliente.setText("Ingrese el Primer Apellido del Cliente");
+            papellido_cliente.setForeground(Color.gray);
+        }
+    
+    if (sapellido_cliente.getText().isEmpty()) {
+            sapellido_cliente.setText("Ingrese el Segundo Apellido del Cliente");
+            sapellido_cliente.setForeground(Color.gray);
+        }
+    
+    if (cedula_cliente.getText().isEmpty()) {
+            cedula_cliente.setText("Ingrese el Numero de Documento del Cliente");
+            cedula_cliente.setForeground(Color.gray);
+        }
+    
+    if (telefono_cliente.getText().isEmpty()) {
+            telefono_cliente.setText("Ingrese el Telefono del Cliente");
+            telefono_cliente.setForeground(Color.gray);
+        }
+    
+    if (correo_cliente.getText().isEmpty()) {
+            correo_cliente.setText("Ingrese el Correo Electronico del Cliente");
+            correo_cliente.setForeground(Color.gray);
+        }
+    
+    if (direccion_cliente.getText().isEmpty()) {
+            direccion_cliente.setText("Ingrese la Dirección del Cliente");
+            direccion_cliente.setForeground(Color.gray);
+        }
+    }//GEN-LAST:event_snombre_clienteMousePressed
+
+    private void snombre_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_snombre_clienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_snombre_clienteActionPerformed
+
+    private void papellido_clienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_papellido_clienteMousePressed
+    if (papellido_cliente.getText().equals("Ingrese el Primer Apellido del Cliente")) {
+            papellido_cliente.setText("");
+            papellido_cliente.setForeground(Color.black);
+        }
+    
+    if (pnombre_cliente.getText().isEmpty()) {
+            pnombre_cliente.setText("Ingrese el Primer Nombre del Cliente");
+            pnombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (snombre_cliente.getText().isEmpty()) {
+            snombre_cliente.setText("Ingrese el Segundo Nombre del Cliente");
+            snombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (sapellido_cliente.getText().isEmpty()) {
+            sapellido_cliente.setText("Ingrese el Segundo Apellido del Cliente");
+            sapellido_cliente.setForeground(Color.gray);
+        }
+    
+    if (cedula_cliente.getText().isEmpty()) {
+            cedula_cliente.setText("Ingrese el Numero de Documento del Cliente");
+            cedula_cliente.setForeground(Color.gray);
+        }
+    
+    if (telefono_cliente.getText().isEmpty()) {
+            telefono_cliente.setText("Ingrese el Telefono del Cliente");
+            telefono_cliente.setForeground(Color.gray);
+        }
+    
+    if (correo_cliente.getText().isEmpty()) {
+            correo_cliente.setText("Ingrese el Correo Electronico del Cliente");
+            correo_cliente.setForeground(Color.gray);
+        }
+    
+    if (direccion_cliente.getText().isEmpty()) {
+            direccion_cliente.setText("Ingrese la Dirección del Cliente");
+            direccion_cliente.setForeground(Color.gray);
+        }
+    }//GEN-LAST:event_papellido_clienteMousePressed
+
+    private void papellido_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_papellido_clienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_papellido_clienteActionPerformed
+
+    private void sapellido_clienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sapellido_clienteMousePressed
+    if (sapellido_cliente.getText().equals("Ingrese el Segundo Apellido del Cliente")) {
+            sapellido_cliente.setText("");
+            sapellido_cliente.setForeground(Color.black);
+        }
+    
+    if (pnombre_cliente.getText().isEmpty()) {
+            pnombre_cliente.setText("Ingrese el Primer Nombre del Cliente");
+            pnombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (snombre_cliente.getText().isEmpty()) {
+            snombre_cliente.setText("Ingrese el Segundo Nombre del Cliente");
+            snombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (papellido_cliente.getText().isEmpty()) {
+            papellido_cliente.setText("Ingrese el Primer Apellido del Cliente");
+            papellido_cliente.setForeground(Color.gray);
+        }
+    
+    if (cedula_cliente.getText().isEmpty()) {
+            cedula_cliente.setText("Ingrese el Numero de Documento del Cliente");
+            cedula_cliente.setForeground(Color.gray);
+        }
+    
+    if (telefono_cliente.getText().isEmpty()) {
+            telefono_cliente.setText("Ingrese el Telefono del Cliente");
+            telefono_cliente.setForeground(Color.gray);
+        }
+    
+    if (correo_cliente.getText().isEmpty()) {
+            correo_cliente.setText("Ingrese el Correo Electronico del Cliente");
+            correo_cliente.setForeground(Color.gray);
+        }
+    
+    if (direccion_cliente.getText().isEmpty()) {
+            direccion_cliente.setText("Ingrese la Dirección del Cliente");
+            direccion_cliente.setForeground(Color.gray);
+        }
+    }//GEN-LAST:event_sapellido_clienteMousePressed
+
+    private void sapellido_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sapellido_clienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sapellido_clienteActionPerformed
+
+    private void cedula_clienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cedula_clienteMousePressed
+    if (cedula_cliente.getText().equals("Ingrese el Numero de Documento del Cliente")) {
+            cedula_cliente.setText("");
+            cedula_cliente.setForeground(Color.black);
+        }
+    
+    if (pnombre_cliente.getText().isEmpty()) {
+            pnombre_cliente.setText("Ingrese el Primer Nombre del Cliente");
+            pnombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (snombre_cliente.getText().isEmpty()) {
+            snombre_cliente.setText("Ingrese el Segundo Nombre del Cliente");
+            snombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (sapellido_cliente.getText().isEmpty()) {
+            sapellido_cliente.setText("Ingrese el Segundo Apellido del Cliente");
+            sapellido_cliente.setForeground(Color.gray);
+        }
+    
+    if (papellido_cliente.getText().isEmpty()) {
+            papellido_cliente.setText("Ingrese el Primer Apellido del Cliente");
+            papellido_cliente.setForeground(Color.gray);
+        }
+    
+    if (telefono_cliente.getText().isEmpty()) {
+            telefono_cliente.setText("Ingrese el Telefono del Cliente");
+            telefono_cliente.setForeground(Color.gray);
+        }
+    
+    if (correo_cliente.getText().isEmpty()) {
+            correo_cliente.setText("Ingrese el Correo Electronico del Cliente");
+            correo_cliente.setForeground(Color.gray);
+        }
+    
+    if (direccion_cliente.getText().isEmpty()) {
+            direccion_cliente.setText("Ingrese la Dirección del Cliente");
+            direccion_cliente.setForeground(Color.gray);
+        }
+    }//GEN-LAST:event_cedula_clienteMousePressed
+
+    private void cedula_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cedula_clienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cedula_clienteActionPerformed
+
+    private void telefono_clienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_telefono_clienteMousePressed
+    if (telefono_cliente.getText().equals("Ingrese el Telefono del Cliente")) {
+            telefono_cliente.setText("");
+            telefono_cliente.setForeground(Color.black);
+        }
+    
+    if (pnombre_cliente.getText().isEmpty()) {
+            pnombre_cliente.setText("Ingrese el Primer Nombre del Cliente");
+            pnombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (snombre_cliente.getText().isEmpty()) {
+            snombre_cliente.setText("Ingrese el Segundo Nombre del Cliente");
+            snombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (sapellido_cliente.getText().isEmpty()) {
+            sapellido_cliente.setText("Ingrese el Segundo Apellido del Cliente");
+            sapellido_cliente.setForeground(Color.gray);
+        }
+    
+    if (cedula_cliente.getText().isEmpty()) {
+            cedula_cliente.setText("Ingrese el Numero de Documento del Cliente");
+            cedula_cliente.setForeground(Color.gray);
+        }
+    
+    if (papellido_cliente.getText().isEmpty()) {
+            papellido_cliente.setText("Ingrese el Primer Apellido del Cliente");
+            papellido_cliente.setForeground(Color.gray);
+        }
+    
+    if (correo_cliente.getText().isEmpty()) {
+            correo_cliente.setText("Ingrese el Correo Electronico del Cliente");
+            correo_cliente.setForeground(Color.gray);
+        }
+    
+    if (direccion_cliente.getText().isEmpty()) {
+            direccion_cliente.setText("Ingrese la Dirección del Cliente");
+            direccion_cliente.setForeground(Color.gray);
+        }
+    }//GEN-LAST:event_telefono_clienteMousePressed
+
+    private void telefono_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefono_clienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_telefono_clienteActionPerformed
+
+    private void correo_clienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_correo_clienteMousePressed
+    if (correo_cliente.getText().equals("Ingrese el Correo Electronico del Cliente")) {
+            correo_cliente.setText("");
+            correo_cliente.setForeground(Color.black);
+        }
+    
+    if (pnombre_cliente.getText().isEmpty()) {
+            pnombre_cliente.setText("Ingrese el Primer Nombre del Cliente");
+            pnombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (snombre_cliente.getText().isEmpty()) {
+            snombre_cliente.setText("Ingrese el Segundo Nombre del Cliente");
+            snombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (sapellido_cliente.getText().isEmpty()) {
+            sapellido_cliente.setText("Ingrese el Segundo Apellido del Cliente");
+            sapellido_cliente.setForeground(Color.gray);
+        }
+    
+    if (cedula_cliente.getText().isEmpty()) {
+            cedula_cliente.setText("Ingrese el Numero de Documento del Cliente");
+            cedula_cliente.setForeground(Color.gray);
+        }
+    
+    if (telefono_cliente.getText().isEmpty()) {
+            telefono_cliente.setText("Ingrese el Telefono del Cliente");
+            telefono_cliente.setForeground(Color.gray);
+        }
+    
+    if (papellido_cliente.getText().isEmpty()) {
+            papellido_cliente.setText("Ingrese el Primer Apellido del Cliente");
+            papellido_cliente.setForeground(Color.gray);
+        }
+    
+    if (direccion_cliente.getText().isEmpty()) {
+            direccion_cliente.setText("Ingrese la Dirección del Cliente");
+            direccion_cliente.setForeground(Color.gray);
+        }
+    }//GEN-LAST:event_correo_clienteMousePressed
+
+    private void correo_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correo_clienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_correo_clienteActionPerformed
+
+    private void direccion_clienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_direccion_clienteMousePressed
+    if (direccion_cliente.getText().equals("Ingrese la Dirección del Cliente")) {
+            direccion_cliente.setText("");
+            direccion_cliente.setForeground(Color.black);
+        }
+    
+    if (pnombre_cliente.getText().isEmpty()) {
+            pnombre_cliente.setText("Ingrese el Primer Nombre del Cliente");
+            pnombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (snombre_cliente.getText().isEmpty()) {
+            snombre_cliente.setText("Ingrese el Segundo Nombre del Cliente");
+            snombre_cliente.setForeground(Color.gray);
+        }
+    
+    if (sapellido_cliente.getText().isEmpty()) {
+            sapellido_cliente.setText("Ingrese el Segundo Apellido del Cliente");
+            sapellido_cliente.setForeground(Color.gray);
+        }
+    
+    if (cedula_cliente.getText().isEmpty()) {
+            cedula_cliente.setText("Ingrese el Numero de Documento del Cliente");
+            cedula_cliente.setForeground(Color.gray);
+        }
+    
+    if (telefono_cliente.getText().isEmpty()) {
+            telefono_cliente.setText("Ingrese el Telefono del Cliente");
+            telefono_cliente.setForeground(Color.gray);
+        }
+    
+    if (correo_cliente.getText().isEmpty()) {
+            correo_cliente.setText("Ingrese el Correo Electronico del Cliente");
+            correo_cliente.setForeground(Color.gray);
+        }
+    
+    if (papellido_cliente.getText().isEmpty()) {
+            papellido_cliente.setText("Ingrese el Primer Apellido del Cliente");
+            papellido_cliente.setForeground(Color.gray);
+        }
+    }//GEN-LAST:event_direccion_clienteMousePressed
+
+    private void direccion_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_direccion_clienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_direccion_clienteActionPerformed
+   
+    private void pnombre_clienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pnombre_clienteKeyTyped
+    char c = evt.getKeyChar();
+    if((c<'a' || c>'z') &&(c<'A' || c>'Z')) evt.consume();
+    }//GEN-LAST:event_pnombre_clienteKeyTyped
+
+    private void snombre_clienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_snombre_clienteKeyTyped
+    char c = evt.getKeyChar();
+    if((c<'a' || c>'z') &&(c<'A' || c>'Z')) evt.consume();
+    }//GEN-LAST:event_snombre_clienteKeyTyped
+
+    private void papellido_clienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_papellido_clienteKeyTyped
+    char c = evt.getKeyChar();
+    if((c<'a' || c>'z') &&(c<'A' || c>'Z')) evt.consume();
+    }//GEN-LAST:event_papellido_clienteKeyTyped
+
+    private void sapellido_clienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_sapellido_clienteKeyTyped
+    char c = evt.getKeyChar();
+    if((c<'a' || c>'z') &&(c<'A' || c>'Z')) evt.consume();
+    }//GEN-LAST:event_sapellido_clienteKeyTyped
+
+    private void cedula_clienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cedula_clienteKeyTyped
+    char c = evt.getKeyChar();
+    if(c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_cedula_clienteKeyTyped
+
+    private void telefono_clienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_telefono_clienteKeyTyped
+    char c = evt.getKeyChar();
+    if(c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_telefono_clienteKeyTyped
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Text11;
+    private javax.swing.JLabel Text12;
+    private javax.swing.JLabel Text3;
+    private javax.swing.JLabel Text4;
+    private javax.swing.JLabel Text6;
+    private javax.swing.JLabel Text7;
+    private javax.swing.JLabel Text8;
+    private javax.swing.JLabel Text9;
+    private javax.swing.JLabel Title;
+    private javax.swing.JPanel body;
+    private javax.swing.JLabel btnagregar;
+    private javax.swing.JLabel btnbuscar;
+    private javax.swing.JLabel btneditar;
+    private javax.swing.JLabel btnmostrar;
+    private javax.swing.JTextField cedula_cliente;
+    private javax.swing.JTextField correo_cliente;
+    private javax.swing.JTextField direccion_cliente;
+    private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator12;
+    private javax.swing.JSeparator jSeparator13;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JTextField papellido_cliente;
+    private javax.swing.JTextField pnombre_cliente;
+    private javax.swing.JTextField sapellido_cliente;
+    private javax.swing.JTextField snombre_cliente;
+    private javax.swing.JTextField telefono_cliente;
     // End of variables declaration//GEN-END:variables
 }
