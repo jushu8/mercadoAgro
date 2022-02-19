@@ -58,19 +58,19 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
         jLabel13 = new javax.swing.JLabel();
         pass_usuario = new javax.swing.JPasswordField();
         passLabel2 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        logclave = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
         user_usuario = new javax.swing.JTextField();
         usuario2 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
         iniciosesion1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        loguser = new javax.swing.JLabel();
+        btnadduser = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(750, 430));
-        setPreferredSize(new java.awt.Dimension(750, 430));
+        setMinimumSize(new java.awt.Dimension(750, 610));
+        setPreferredSize(new java.awt.Dimension(750, 610));
+        setRequestFocusEnabled(false);
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         body.setBackground(new java.awt.Color(255, 255, 255));
@@ -83,7 +83,7 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
         icon_logo1.setToolTipText("");
         add(icon_logo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 130, 100));
 
-        titulo1.setFont(new java.awt.Font("Roboto Black", 1, 36)); // NOI18N
+        titulo1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         titulo1.setText("AgroFacil");
         add(titulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
 
@@ -94,9 +94,9 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo.png"))); // NOI18N
         add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 290, 500));
 
-        passLabel1.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        passLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         passLabel1.setText("CONFIRMACION");
-        add(passLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 140, 30));
+        add(passLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 140, 30));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/marca-de-verificacion.png"))); // NOI18N
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 30, 30));
@@ -109,15 +109,14 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
                 confirmacionpassMousePressed(evt);
             }
         });
-        add(confirmacionpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, 180, 30));
+        add(confirmacionpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 180, 30));
 
-        jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
-        add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 180, 20));
+        jSeparator7.setForeground(new java.awt.Color(51, 153, 255));
+        add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 180, 20));
 
-        jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator6.setForeground(new java.awt.Color(51, 153, 255));
         add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 180, 20));
 
-        jLabel13.setFont(new java.awt.Font("Roboto", 0, 11)); // NOI18N
         jLabel13.setText("Utiliza 8 caracteres como mínimo con una combinación de letras, números y simbolos.");
         add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, 20));
 
@@ -131,17 +130,16 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
         });
         add(pass_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 180, 30));
 
-        passLabel2.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        passLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         passLabel2.setText("CONTRASEÑA");
-        add(passLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 110, 30));
+        add(passLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 110, 30));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/clave.png"))); // NOI18N
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 30, 30));
+        logclave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contrasena2.png"))); // NOI18N
+        add(logclave, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 40, 30));
 
-        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
+        jSeparator4.setForeground(new java.awt.Color(51, 153, 255));
         add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 410, 10));
 
-        jLabel9.setFont(new java.awt.Font("Roboto", 0, 11)); // NOI18N
         jLabel9.setText("Puede utilizar letras, números y símbolos.");
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, 20));
 
@@ -156,47 +154,19 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
         });
         add(user_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 410, 30));
 
-        usuario2.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        usuario2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         usuario2.setText("USUARIO");
-        add(usuario2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 70, 30));
+        add(usuario2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 70, 30));
 
-        jPanel3.setBackground(new java.awt.Color(0, 204, 51));
-        jPanel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel3MouseClicked(evt);
-            }
-        });
-
-        jLabel8.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Crear Cuenta");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(jLabel8)
-                .addGap(22, 22, 22))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 130, 40));
-
-        iniciosesion1.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        iniciosesion1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         iniciosesion1.setText("CREAR CUENTA");
         add(iniciosesion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iniciar-sesion.png"))); // NOI18N
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 30, 30));
+        loguser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lgusuario2.png"))); // NOI18N
+        add(loguser, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 30, 30));
+
+        btnadduser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/adduser2.png"))); // NOI18N
+        add(btnadduser, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void confirmacionpassMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirmacionpassMousePressed
@@ -243,55 +213,24 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
             confirmacionpass.setForeground(Color.gray);
         }
     }//GEN-LAST:event_user_usuarioMousePressed
-
-    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
-        try {
-            Conexion con = new Conexion();
-            con.ConexionPostgres();
-            String pass1= String.valueOf(pass_usuario.getPassword());
-            String pass2= String.valueOf(confirmacionpass.getPassword());
-
-            if(pass1.equals(pass2)){
-                String query ="insert into usuario values('"+user_usuario.getText()+"','Vendedor','"+String.valueOf(pass_usuario.getPassword())+"')";
-                JOptionPane.showMessageDialog(this, "¡Cuenta creada con exito!");
-
-                con.actualizar(query);
-                                
-            }
-            else{
-                JOptionPane.showMessageDialog(this, "¡Las contraseñas no coinciden!");
-            }
-            con.cerrar();
-
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Usuario_CrearCuenta.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(Usuario_CrearCuenta.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(Usuario_CrearCuenta.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            Logger.getLogger(Usuario_CrearCuenta.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jPanel3MouseClicked
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel body;
+    private javax.swing.JLabel btnadduser;
     private javax.swing.JPasswordField confirmacionpass;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel icon_logo1;
     private javax.swing.JLabel iniciosesion1;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JLabel logclave;
     private javax.swing.JLabel logo;
+    private javax.swing.JLabel loguser;
     private javax.swing.JLabel passLabel1;
     private javax.swing.JLabel passLabel2;
     private javax.swing.JPasswordField pass_usuario;

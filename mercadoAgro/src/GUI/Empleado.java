@@ -48,18 +48,6 @@ public class Empleado extends javax.swing.JPanel {
         body = new javax.swing.JPanel();
         Title = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
-        buscar = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        button1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        button4 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        button5 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        button6 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        button7 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
         Text3 = new javax.swing.JLabel();
         pnombre_empleado = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
@@ -84,18 +72,10 @@ public class Empleado extends javax.swing.JPanel {
         Text12 = new javax.swing.JLabel();
         direccion_empleado = new javax.swing.JTextField();
         jSeparator13 = new javax.swing.JSeparator();
-        agregar = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        button3 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        modificar = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        button15 = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        mostrar = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        button16 = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
+        btnaddempleado = new javax.swing.JLabel();
+        btnbuscarempleado = new javax.swing.JLabel();
+        btneditempleado = new javax.swing.JLabel();
+        btnmostrarempleado = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(750, 430));
@@ -106,155 +86,17 @@ public class Empleado extends javax.swing.JPanel {
         body.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        Title.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Title.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Title.setText("Agregar, Buscar, Modificar y Mostrar Empleados");
-        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 800, -1));
+        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 740, -1));
 
         jSeparator3.setForeground(new java.awt.Color(51, 51, 51));
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 10, 290));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 10, 290));
 
-        buscar.setBackground(new java.awt.Color(0, 204, 51));
-        buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        buscar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                buscarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                buscarMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                buscarMousePressed(evt);
-            }
-        });
-        buscar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Buscar");
-        buscar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 10, 90, 30));
-
-        button1.setBackground(new java.awt.Color(0, 204, 51));
-        button1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        button1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                button1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                button1MouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                button1MousePressed(evt);
-            }
-        });
-        button1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Agregar");
-        button1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, 30));
-
-        buscar.add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 180, 50));
-
-        button4.setBackground(new java.awt.Color(0, 204, 51));
-        button4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        button4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                button4MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                button4MouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                button4MousePressed(evt);
-            }
-        });
-        button4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Agregar");
-        button4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 10, 80, 30));
-
-        button5.setBackground(new java.awt.Color(0, 204, 51));
-        button5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        button5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                button5MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                button5MouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                button5MousePressed(evt);
-            }
-        });
-        button5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Agregar");
-        button5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, 30));
-
-        button4.add(button5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 180, 50));
-
-        buscar.add(button4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 330, 140, 50));
-
-        button6.setBackground(new java.awt.Color(0, 204, 51));
-        button6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        button6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                button6MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                button6MouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                button6MousePressed(evt);
-            }
-        });
-        button6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Agregar");
-        button6.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 10, 80, 30));
-
-        button7.setBackground(new java.awt.Color(0, 204, 51));
-        button7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        button7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                button7MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                button7MouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                button7MousePressed(evt);
-            }
-        });
-        button7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Agregar");
-        button7.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, 30));
-
-        button6.add(button7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 180, 50));
-
-        buscar.add(button6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 140, 50));
-
-        add(buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 150, 50));
-
-        Text3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Text3.setText("Primer Nombre ");
         add(Text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, -1));
 
@@ -277,13 +119,13 @@ public class Empleado extends javax.swing.JPanel {
                 pnombre_empleadoKeyTyped(evt);
             }
         });
-        add(pnombre_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 330, 30));
+        add(pnombre_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 290, 30));
 
-        jSeparator4.setForeground(new java.awt.Color(0, 204, 51));
+        jSeparator4.setForeground(new java.awt.Color(51, 153, 255));
         jSeparator4.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 330, 10));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 290, 10));
 
-        Text6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Text6.setText("Segundo Nombre");
         add(Text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 140, -1));
 
@@ -306,13 +148,13 @@ public class Empleado extends javax.swing.JPanel {
                 snombre_empleadoKeyTyped(evt);
             }
         });
-        add(snombre_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 330, 30));
+        add(snombre_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 290, 30));
 
-        jSeparator7.setForeground(new java.awt.Color(0, 204, 51));
+        jSeparator7.setForeground(new java.awt.Color(51, 153, 255));
         jSeparator7.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 330, 10));
+        add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 290, 10));
 
-        Text7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Text7.setText("Primer Apellido");
         add(Text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 190, -1));
 
@@ -335,13 +177,13 @@ public class Empleado extends javax.swing.JPanel {
                 papellido_empleadoKeyTyped(evt);
             }
         });
-        add(papellido_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 330, 30));
+        add(papellido_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 290, 30));
 
-        jSeparator8.setForeground(new java.awt.Color(0, 204, 51));
+        jSeparator8.setForeground(new java.awt.Color(51, 153, 255));
         jSeparator8.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 330, 10));
+        add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 290, 10));
 
-        Text8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Text8.setText("Segundo Apellido");
         add(Text8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 150, -1));
 
@@ -364,15 +206,15 @@ public class Empleado extends javax.swing.JPanel {
                 sapellido_empleadoKeyTyped(evt);
             }
         });
-        add(sapellido_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 330, 30));
+        add(sapellido_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 290, 30));
 
-        jSeparator9.setForeground(new java.awt.Color(0, 204, 51));
+        jSeparator9.setForeground(new java.awt.Color(51, 153, 255));
         jSeparator9.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 330, 10));
+        add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 290, 10));
 
-        Text9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Text9.setText("Numero de Documento");
-        add(Text9, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, 180, -1));
+        add(Text9, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, 180, -1));
 
         cedula_empleado.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         cedula_empleado.setForeground(new java.awt.Color(102, 102, 102));
@@ -393,15 +235,15 @@ public class Empleado extends javax.swing.JPanel {
                 cedula_empleadoKeyTyped(evt);
             }
         });
-        add(cedula_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 330, 30));
+        add(cedula_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 300, 30));
 
-        jSeparator10.setForeground(new java.awt.Color(0, 204, 51));
+        jSeparator10.setForeground(new java.awt.Color(51, 153, 255));
         jSeparator10.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 330, 10));
+        add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 300, 10));
 
-        Text4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Text4.setText("Telefono");
-        add(Text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, 110, -1));
+        add(Text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 110, -1));
 
         telefono_empleado.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         telefono_empleado.setForeground(new java.awt.Color(102, 102, 102));
@@ -422,15 +264,15 @@ public class Empleado extends javax.swing.JPanel {
                 telefono_empleadoKeyTyped(evt);
             }
         });
-        add(telefono_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 330, 30));
+        add(telefono_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 300, 30));
 
-        jSeparator5.setForeground(new java.awt.Color(0, 204, 51));
+        jSeparator5.setForeground(new java.awt.Color(51, 153, 255));
         jSeparator5.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 330, 10));
+        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 300, 10));
 
-        Text11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Text11.setText("Correo Electrónico");
-        add(Text11, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 240, 180, -1));
+        add(Text11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 180, -1));
 
         correo_empleado.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         correo_empleado.setForeground(new java.awt.Color(102, 102, 102));
@@ -446,15 +288,15 @@ public class Empleado extends javax.swing.JPanel {
                 correo_empleadoActionPerformed(evt);
             }
         });
-        add(correo_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 330, 30));
+        add(correo_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, 300, 30));
 
-        jSeparator12.setForeground(new java.awt.Color(0, 204, 51));
+        jSeparator12.setForeground(new java.awt.Color(51, 153, 255));
         jSeparator12.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 330, 10));
+        add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 300, 10));
 
-        Text12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Text12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Text12.setText("Dirección");
-        add(Text12, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 140, -1));
+        add(Text12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 140, -1));
 
         direccion_empleado.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         direccion_empleado.setForeground(new java.awt.Color(102, 102, 102));
@@ -470,158 +312,24 @@ public class Empleado extends javax.swing.JPanel {
                 direccion_empleadoActionPerformed(evt);
             }
         });
-        add(direccion_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, 330, 30));
+        add(direccion_empleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 300, 30));
 
-        jSeparator13.setForeground(new java.awt.Color(0, 204, 51));
+        jSeparator13.setForeground(new java.awt.Color(51, 153, 255));
         jSeparator13.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 370, 330, 10));
+        add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 370, 300, 10));
 
-        agregar.setBackground(new java.awt.Color(0, 204, 51));
-        agregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        agregar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                agregarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                agregarMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                agregarMousePressed(evt);
-            }
-        });
-        agregar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btnaddempleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/addempleado2.png"))); // NOI18N
+        add(btnaddempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Agregar");
-        agregar.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 10, 80, 30));
+        btnbuscarempleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnbuscar.png"))); // NOI18N
+        add(btnbuscarempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 420, -1, -1));
 
-        button3.setBackground(new java.awt.Color(0, 204, 51));
-        button3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        button3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                button3MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                button3MouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                button3MousePressed(evt);
-            }
-        });
-        button3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btneditempleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnedit.png"))); // NOI18N
+        add(btneditempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Agregar");
-        button3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, 30));
-
-        agregar.add(button3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 180, 50));
-
-        add(agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 150, 50));
-
-        modificar.setBackground(new java.awt.Color(0, 204, 51));
-        modificar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        modificar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                modificarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                modificarMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                modificarMousePressed(evt);
-            }
-        });
-        modificar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("Modificar");
-        modificar.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 10, 90, 30));
-
-        button15.setBackground(new java.awt.Color(0, 204, 51));
-        button15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        button15.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                button15MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                button15MouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                button15MousePressed(evt);
-            }
-        });
-        button15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("Agregar");
-        button15.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, 30));
-
-        modificar.add(button15, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 180, 50));
-
-        add(modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, 150, 50));
-
-        mostrar.setBackground(new java.awt.Color(0, 204, 51));
-        mostrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        mostrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                mostrarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                mostrarMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                mostrarMousePressed(evt);
-            }
-        });
-        mostrar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("Mostrar");
-        mostrar.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 10, 90, 30));
-
-        button16.setBackground(new java.awt.Color(0, 204, 51));
-        button16.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        button16.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                button16MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                button16MouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                button16MousePressed(evt);
-            }
-        });
-        button16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("Agregar");
-        button16.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, 30));
-
-        mostrar.add(button16, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 180, 50));
-
-        add(mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 410, 150, 50));
+        btnmostrarempleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnmostrar.png"))); // NOI18N
+        add(btnmostrarempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 420, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void buscarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscarMouseEntered
-    buscar.setBackground(new Color(102,255,0));
-    }//GEN-LAST:event_buscarMouseEntered
-
-    private void buscarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscarMouseExited
-    buscar.setBackground(new Color(0,204,51));        
-    }//GEN-LAST:event_buscarMouseExited
 
     private void pnombre_empleadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnombre_empleadoMousePressed
     if (pnombre_empleado.getText().equals("Ingrese el Primer Nombre del Empleado")) {
@@ -991,293 +699,7 @@ public class Empleado extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_direccion_empleadoActionPerformed
 
-    // SUBIR
-    private void buscarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscarMousePressed
-        try {
-            Conexion con = new Conexion();
-            con.ConexionPostgres();
-
-            String query ="select * from empleado where cedula_empleado = "+ Integer.parseInt(cedula_empleado.getText().trim());
-
-            ResultSet rs = con.consultar(query);
-
-            if(rs.next()){
-                pnombre_empleado.setText(rs.getString("primernombre_empleado"));
-                snombre_empleado.setText(rs.getString("segundonombre_empleado"));
-                papellido_empleado.setText(rs.getString("primerapellido_empleado"));
-                sapellido_empleado.setText(rs.getString("segundoapellido_empleado"));
-                telefono_empleado.setText(rs.getString("telefono_empleado"));
-                correo_empleado.setText(rs.getString("correo_empleado"));
-                direccion_empleado.setText(rs.getString("direccion_empleado"));
-            }
-            else{
-                JOptionPane.showMessageDialog(this, "No existe el Empleado");
-            }
-            pnombre_empleado.setForeground(Color.black);
-            snombre_empleado.setForeground(Color.black);
-            papellido_empleado.setForeground(Color.black);
-            sapellido_empleado.setForeground(Color.black);
-            correo_empleado.setForeground(Color.black);
-            telefono_empleado.setForeground(Color.black);
-            direccion_empleado.setForeground(Color.black);
-            con.cerrar();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_buscarMousePressed
-
-    private void button1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button1MouseEntered
-
-    private void button1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button1MouseExited
-
-    private void button1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button1MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button1MousePressed
-
-    private void button3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button3MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button3MouseEntered
-
-    private void button3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button3MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button3MouseExited
-
-    private void button3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button3MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button3MousePressed
-
-    private void agregarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agregarMouseEntered
-    agregar.setBackground(new Color(102,255,0));
-    }//GEN-LAST:event_agregarMouseEntered
-
-    private void agregarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agregarMouseExited
-    agregar.setBackground(new Color(0,204,51));
-    }//GEN-LAST:event_agregarMouseExited
-
-    private void agregarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agregarMousePressed
-        try {
-            Conexion con = new Conexion();
-            con.ConexionPostgres();
-            if(correo_empleado.getText().contains("@") && correo_empleado.getText().contains(".")){
-                if(telefono_empleado.getText().length()==10){
-                    if(snombre_empleado.getText().equals("Ingrese el Segundo Nombre del Empleado") && sapellido_empleado.getText().equals("Ingrese el Segundo Apellido del Empleado")){
-                        String query ="insert into empleado values("+Long.parseLong(cedula_empleado.getText().trim())+",'"+pnombre_empleado.getText().trim()+"','','"+papellido_empleado.getText().trim()+"','',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')";
-                        JOptionPane.showMessageDialog(this, "Registro exitoso");
-                        con.actualizar(query);
-                        
-                        con.cerrar();
-                        pnombre_empleado.setText(null);
-                        snombre_empleado.setText(null);
-                        papellido_empleado.setText(null);
-                        sapellido_empleado.setText(null);
-                        cedula_empleado.setText(null);
-                        correo_empleado.setText(null);
-                        direccion_empleado.setText(null);
-                        telefono_empleado.setText(null);
-                    }
-                    else if(snombre_empleado.getText().equals("Ingrese el Segundo Nombre del Empleado")){
-                        String query ="insert into empleado values("+Long.parseLong(cedula_empleado.getText().trim())+",'"+pnombre_empleado.getText().trim()+"','','"+papellido_empleado.getText().trim()+"','"+sapellido_empleado.getText().trim()+"',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')";
-                        JOptionPane.showMessageDialog(this, "Registro exitoso");
-                        con.actualizar(query);
-                        
-                        con.cerrar();
-                        pnombre_empleado.setText(null);
-                        snombre_empleado.setText(null);
-                        papellido_empleado.setText(null);
-                        sapellido_empleado.setText(null);
-                        cedula_empleado.setText(null);
-                        correo_empleado.setText(null);
-                        direccion_empleado.setText(null);
-                        telefono_empleado.setText(null);
-                    }
-                    else if(sapellido_empleado.getText().equals("Ingrese el Segundo Apellido del Empleado")){
-                        String query ="insert into empleado values("+Long.parseLong(cedula_empleado.getText().trim())+",'"+pnombre_empleado.getText().trim()+"','"+snombre_empleado.getText().trim()+"','"+papellido_empleado.getText().trim()+"','',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')";
-                        JOptionPane.showMessageDialog(this, "Registro exitoso");
-                        con.actualizar(query);
-                        
-                        con.cerrar();
-                        pnombre_empleado.setText(null);
-                        snombre_empleado.setText(null);
-                        papellido_empleado.setText(null);
-                        sapellido_empleado.setText(null);
-                        cedula_empleado.setText(null);
-                        correo_empleado.setText(null);
-                        direccion_empleado.setText(null);
-                        telefono_empleado.setText(null);
-                    }
-                    else {
-                        String query ="insert into empleado values("+Long.parseLong(cedula_empleado.getText().trim())+",'"+pnombre_empleado.getText().trim()+"','"+snombre_empleado.getText().trim()+"','"+papellido_empleado.getText().trim()+"','"+sapellido_empleado.getText().trim()+"',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')";
-                        JOptionPane.showMessageDialog(this, "Registro exitoso");
-                        con.actualizar(query);
-                        
-                        con.cerrar();
-                        pnombre_empleado.setText(null);
-                        snombre_empleado.setText(null);
-                        papellido_empleado.setText(null);
-                        sapellido_empleado.setText(null);
-                        cedula_empleado.setText(null);
-                        correo_empleado.setText(null);
-                        direccion_empleado.setText(null);
-                        telefono_empleado.setText(null);
-                        
-                    }
-                }
-                else{
-                    JOptionPane.showMessageDialog(this, "Telefono Invalido");
-                }
-            }
-            else{
-                JOptionPane.showMessageDialog(this, "Correo Invalido");
-            }
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_agregarMousePressed
-
-    private void button5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button5MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button5MouseEntered
-
-    private void button5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button5MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button5MouseExited
-
-    private void button5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button5MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button5MousePressed
-
-    private void button4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button4MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button4MouseEntered
-
-    private void button4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button4MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button4MouseExited
-
-    private void button4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button4MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button4MousePressed
-
-    private void button7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button7MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button7MouseEntered
-
-    private void button7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button7MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button7MouseExited
-
-    private void button7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button7MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button7MousePressed
-
-    private void button6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button6MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button6MouseEntered
-
-    private void button6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button6MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button6MouseExited
-
-    private void button6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button6MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button6MousePressed
-   
-    private void button15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button15MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button15MouseEntered
-
-    private void button15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button15MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button15MouseExited
-
-    private void button15MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button15MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button15MousePressed
-
-    private void modificarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMouseEntered
-    modificar.setBackground(new Color(102,255,0));
-    }//GEN-LAST:event_modificarMouseEntered
-
-    private void modificarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMouseExited
-    modificar.setBackground(new Color(0,204,51));
-    }//GEN-LAST:event_modificarMouseExited
-
-    private void modificarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMousePressed
-        try {
-            Conexion con = new Conexion();
-            con.ConexionPostgres();
-
-            String query ="update empleado set primernombre_empleado = '"+pnombre_empleado.getText().trim()+"', segundonombre_empleado='"+snombre_empleado.getText().trim()+"', primerapellido_empleado='"+papellido_empleado.getText().trim()+"', segundoapellido_empleado='"+sapellido_empleado.getText() .trim()+"', telefono_empleado="+Long.parseLong(telefono_empleado.getText().trim())+",correo_empleado='"+correo_empleado.getText().trim()+"', direccion_empleado='"+direccion_empleado.getText().trim()+"'where cedula_empleado="+Long.parseLong(cedula_empleado.getText().trim());
-            JOptionPane.showMessageDialog(this, "Datos Actualizados");
-            con.actualizar(query);
-
-            con.cerrar();
-            pnombre_empleado.setText(null);
-            snombre_empleado.setText(null);
-            papellido_empleado.setText(null);
-            sapellido_empleado.setText(null);
-            cedula_empleado.setText(null);
-            correo_empleado.setText(null);
-            direccion_empleado.setText(null);
-            telefono_empleado.setText(null);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_modificarMousePressed
-
-    private void button16MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button16MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button16MouseEntered
-
-    private void button16MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button16MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button16MouseExited
-
-    private void button16MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button16MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button16MousePressed
-
-    private void mostrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mostrarMouseEntered
-    mostrar.setBackground(new Color(102,255,0));
-    }//GEN-LAST:event_mostrarMouseEntered
-
-    private void mostrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mostrarMouseExited
-    mostrar.setBackground(new Color(0,204,51));
-    }//GEN-LAST:event_mostrarMouseExited
-
-    private void mostrarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mostrarMousePressed
-    Empleado_TE c = new Empleado_TE();
-    c.setSize(800, 500);
-    c.setLocation(0, 0);
-    
-    escritorio.removeAll();
-    escritorio.add(c, BorderLayout.CENTER);
-    escritorio.revalidate();
-    escritorio.repaint(); 
-    }//GEN-LAST:event_mostrarMousePressed
-
+  
     private void pnombre_empleadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pnombre_empleadoKeyTyped
     char c = evt.getKeyChar();
     if((c<'a' || c>'z') &&(c<'A' || c>'Z')) evt.consume();
@@ -1319,32 +741,14 @@ public class Empleado extends javax.swing.JPanel {
     private javax.swing.JLabel Text8;
     private javax.swing.JLabel Text9;
     private javax.swing.JLabel Title;
-    private javax.swing.JPanel agregar;
     private javax.swing.JPanel body;
-    private javax.swing.JPanel buscar;
-    private javax.swing.JPanel button1;
-    private javax.swing.JPanel button15;
-    private javax.swing.JPanel button16;
-    private javax.swing.JPanel button3;
-    private javax.swing.JPanel button4;
-    private javax.swing.JPanel button5;
-    private javax.swing.JPanel button6;
-    private javax.swing.JPanel button7;
+    private javax.swing.JLabel btnaddempleado;
+    private javax.swing.JLabel btnbuscarempleado;
+    private javax.swing.JLabel btneditempleado;
+    private javax.swing.JLabel btnmostrarempleado;
     private javax.swing.JTextField cedula_empleado;
     private javax.swing.JTextField correo_empleado;
     private javax.swing.JTextField direccion_empleado;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
@@ -1354,8 +758,6 @@ public class Empleado extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JPanel modificar;
-    private javax.swing.JPanel mostrar;
     private javax.swing.JTextField papellido_empleado;
     private javax.swing.JTextField pnombre_empleado;
     private javax.swing.JTextField sapellido_empleado;

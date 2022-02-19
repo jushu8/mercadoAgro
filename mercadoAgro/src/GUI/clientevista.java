@@ -78,8 +78,8 @@ public class clientevista extends javax.swing.JPanel {
         btnmostrar = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(750, 430));
-        setPreferredSize(new java.awt.Dimension(750, 430));
+        setMinimumSize(new java.awt.Dimension(750, 610));
+        setPreferredSize(new java.awt.Dimension(750, 610));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         body.setBackground(new java.awt.Color(255, 255, 255));
@@ -319,20 +319,20 @@ public class clientevista extends javax.swing.JPanel {
         add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, 280, 10));
 
         btnagregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnadduser.png"))); // NOI18N
-        btnagregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        add(btnagregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, -1, -1));
+        btnagregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(btnagregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, -1, -1));
 
         btnbuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnbuscar.png"))); // NOI18N
-        btnbuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        add(btnbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, -1, -1));
+        btnbuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(btnbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 410, -1, -1));
 
         btneditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnedit.png"))); // NOI18N
-        btneditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        add(btneditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, -1, -1));
+        btneditar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(btneditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 410, -1, -1));
 
         btnmostrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnmostrar.png"))); // NOI18N
-        btnmostrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        add(btnmostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, -1, -1));
+        btnmostrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add(btnmostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 410, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void pnombre_clienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnombre_clienteMousePressed

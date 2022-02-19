@@ -453,7 +453,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
 
     private void imgventas1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgventas1MouseClicked
         
-        new ventavista().setVisible(true);
+        //new ventavista().setVisible(true);
         
         AnimationClass ventas = new AnimationClass();
         ventas.jLabelXRight(-115, 70, 10, 5, ventastxt);
