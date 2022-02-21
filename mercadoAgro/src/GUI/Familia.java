@@ -60,6 +60,7 @@ public class Familia extends javax.swing.JPanel {
         btnbuscarfam = new javax.swing.JLabel();
         btneditfam = new javax.swing.JLabel();
         btnmostrarfam = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(750, 430));
@@ -159,20 +160,23 @@ public class Familia extends javax.swing.JPanel {
 
         btnagregarfam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/addfamilia2.png"))); // NOI18N
         btnagregarfam.setToolTipText("");
-        btnagregarfam.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnagregarfam.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(btnagregarfam, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, -1, -1));
 
         btnbuscarfam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscarproduct2.png"))); // NOI18N
-        btnbuscarfam.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnbuscarfam.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(btnbuscarfam, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 380, -1, -1));
 
         btneditfam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnedit.png"))); // NOI18N
-        btneditfam.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btneditfam.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(btneditfam, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, -1, -1));
 
         btnmostrarfam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnmostrar.png"))); // NOI18N
-        btnmostrarfam.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnmostrarfam.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(btnmostrarfam, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 380, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoico5.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 610));
     }// </editor-fold>//GEN-END:initComponents
 
     private void codigo_familiaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_codigo_familiaMousePressed
@@ -245,8 +249,8 @@ public class Familia extends javax.swing.JPanel {
     }//GEN-LAST:event_descripción_familiaActionPerformed
    
     private void codigo_familiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_codigo_familiaKeyTyped
-    char c btnagregartKeyChar();
-    if(c<'0' || c>'9') evt.consume();
+//    char c btnagregartKeyChar();
+//    if(c<'0' || c>'9') evt.consume();
     }//GEN-LAST:event_codigo_familiaKeyTyped
 
     private void nombre_familiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombre_familiaKeyTyped
@@ -266,6 +270,7 @@ public class Familia extends javax.swing.JPanel {
     private javax.swing.JLabel btnmostrarfam;
     private javax.swing.JTextField codigo_familia;
     private javax.swing.JTextField descripción_familia;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;

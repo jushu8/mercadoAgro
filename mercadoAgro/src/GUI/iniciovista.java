@@ -6,6 +6,7 @@
 package GUI;
 
 import AppPackage.AnimationClass;
+import java.awt.BorderLayout;
 import java.awt.Desktop;
 import java.net.URI;
 import javax.swing.JOptionPane;
@@ -368,7 +369,15 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
     }//GEN-LAST:event_imgreporteMouseClicked
 
     private void imgcategoriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgcategoriaMouseClicked
+        Familia flia = new Familia();
+        flia.setSize(740, 610);
+        flia.setLocation(0, 0);
 
+        imgmostrarbg.removeAll();
+        imgmostrarbg.add(flia, BorderLayout.CENTER);
+        imgmostrarbg.revalidate();
+        imgmostrarbg.repaint();
+        
         AnimationClass catego = new AnimationClass();
         catego.jLabelXRight(-115, 70, 10, 5, categoriatxt);
         
@@ -378,6 +387,15 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
 
     private void imgproveedorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgproveedorMouseClicked
         
+        Proveedor pro = new Proveedor();
+        pro.setSize(740, 610);
+        pro.setLocation(0, 0);
+
+        imgmostrarbg.removeAll();
+        imgmostrarbg.add(pro, BorderLayout.CENTER);
+        imgmostrarbg.revalidate();
+        imgmostrarbg.repaint();
+        
         AnimationClass prove = new AnimationClass();
         prove.jLabelXRight(-115, 70, 10, 5, proveedortxt);
         
@@ -386,7 +404,16 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
     }//GEN-LAST:event_imgproveedorMouseClicked
 
     private void imgclientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgclientesMouseClicked
-       
+        
+        clientevista cli = new clientevista();
+        cli.setSize(740, 610);
+        cli.setLocation(0, 0);
+
+        imgmostrarbg.removeAll();
+        imgmostrarbg.add(cli, BorderLayout.CENTER);
+        imgmostrarbg.revalidate();
+        imgmostrarbg.repaint();
+        
         AnimationClass cliente = new AnimationClass();
         cliente.jLabelXRight(-115, 70, 10, 5, clientestxt);
         
@@ -395,7 +422,16 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
     }//GEN-LAST:event_imgclientesMouseClicked
 
     private void imginventarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imginventarioMouseClicked
-       
+        
+        Producto product = new Producto();
+        product.setSize(740, 610);
+        product.setLocation(0, 0);
+
+        imgmostrarbg.removeAll();
+        imgmostrarbg.add(product, BorderLayout.CENTER);
+        imgmostrarbg.revalidate();
+        imgmostrarbg.repaint();
+        
         AnimationClass inv = new AnimationClass();
         inv.jLabelXRight(-115, 70, 10, 5, invtxt);
         
@@ -404,6 +440,15 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
     }//GEN-LAST:event_imginventarioMouseClicked
 
     private void imgusuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgusuarioMouseClicked
+        
+        Usuario_CrearCuenta crear_c = new Usuario_CrearCuenta();
+        crear_c.setSize(740, 610);
+        crear_c.setLocation(0, 0);
+
+        imgmostrarbg.removeAll();
+        imgmostrarbg.add(crear_c, BorderLayout.CENTER);
+        imgmostrarbg.revalidate();
+        imgmostrarbg.repaint();
         
         AnimationClass usuario = new AnimationClass();
         usuario.jLabelXRight(-115, 70, 10, 5, usuariotxt);
@@ -452,7 +497,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
     }//GEN-LAST:event_btnmusicaMouseClicked
 
     private void imgventas1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgventas1MouseClicked
-        
+       
         //new ventavista().setVisible(true);
         
         AnimationClass ventas = new AnimationClass();

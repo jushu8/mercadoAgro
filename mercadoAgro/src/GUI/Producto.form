@@ -497,7 +497,7 @@
           <Image iconType="3" name="/imagenes/addproducto2.png"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="Cursor Por defecto"/>
         </Property>
       </Properties>
       <Constraints>
@@ -512,7 +512,7 @@
           <Image iconType="3" name="/imagenes/btnbuscar2.png"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="Cursor Por defecto"/>
         </Property>
       </Properties>
       <Constraints>
@@ -527,7 +527,7 @@
           <Image iconType="3" name="/imagenes/btnedit.png"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="Cursor Por defecto"/>
         </Property>
       </Properties>
       <Constraints>
@@ -542,7 +542,7 @@
           <Image iconType="3" name="/imagenes/btnmostrar.png"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Hand Cursor"/>
+          <Color id="Cursor Por defecto"/>
         </Property>
       </Properties>
       <Constraints>

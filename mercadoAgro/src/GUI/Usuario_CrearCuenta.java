@@ -79,7 +79,6 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
 
         icon_logo1.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         icon_logo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        icon_logo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo 1.png"))); // NOI18N
         icon_logo1.setToolTipText("");
         add(icon_logo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 130, 100));
 
@@ -88,17 +87,12 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
         add(titulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
 
         logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo agro.png"))); // NOI18N
         add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 290, 310));
-
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo.png"))); // NOI18N
         add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 290, 500));
 
         passLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         passLabel1.setText("CONFIRMACION");
         add(passLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 140, 30));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/marca-de-verificacion.png"))); // NOI18N
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 30, 30));
 
         confirmacionpass.setForeground(new java.awt.Color(204, 204, 204));

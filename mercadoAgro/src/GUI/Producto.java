@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package diseños;
+package GUI;
 
+import clases.Conexion;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.sql.Connection;
@@ -15,9 +16,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import supermercado.agrofacil.Conexion;
-import diseños.Dashboard;
-import static diseños.Dashboard.escritorio;
+//import supermercado.agrofacil.Conexion;
+//import diseños.Dashboard;
+//import static diseños.Dashboard.escritorio;
 
 
 /**
