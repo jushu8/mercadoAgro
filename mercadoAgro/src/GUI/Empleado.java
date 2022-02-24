@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import clases.Conexion;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.sql.Connection;
@@ -100,7 +101,6 @@ public class Empleado extends javax.swing.JPanel {
         Text3.setText("Primer Nombre ");
         add(Text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, -1));
 
-        pnombre_empleado.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         pnombre_empleado.setForeground(new java.awt.Color(102, 102, 102));
         pnombre_empleado.setText("Ingrese el Primer Nombre del Empleado");
         pnombre_empleado.setBorder(null);
@@ -129,7 +129,6 @@ public class Empleado extends javax.swing.JPanel {
         Text6.setText("Segundo Nombre");
         add(Text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 140, -1));
 
-        snombre_empleado.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         snombre_empleado.setForeground(new java.awt.Color(102, 102, 102));
         snombre_empleado.setText("Ingrese el Segundo Nombre del Empleado");
         snombre_empleado.setBorder(null);
@@ -158,7 +157,6 @@ public class Empleado extends javax.swing.JPanel {
         Text7.setText("Primer Apellido");
         add(Text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 190, -1));
 
-        papellido_empleado.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         papellido_empleado.setForeground(new java.awt.Color(102, 102, 102));
         papellido_empleado.setText("Ingrese el Primer Apellido del Empleado");
         papellido_empleado.setBorder(null);
@@ -187,7 +185,6 @@ public class Empleado extends javax.swing.JPanel {
         Text8.setText("Segundo Apellido");
         add(Text8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 150, -1));
 
-        sapellido_empleado.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         sapellido_empleado.setForeground(new java.awt.Color(102, 102, 102));
         sapellido_empleado.setText("Ingrese el Segundo Apellido del Empleado");
         sapellido_empleado.setBorder(null);
@@ -216,7 +213,6 @@ public class Empleado extends javax.swing.JPanel {
         Text9.setText("Numero de Documento");
         add(Text9, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, 180, -1));
 
-        cedula_empleado.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         cedula_empleado.setForeground(new java.awt.Color(102, 102, 102));
         cedula_empleado.setText("Ingrese el Numero de Documento del Empleado");
         cedula_empleado.setBorder(null);
@@ -245,7 +241,6 @@ public class Empleado extends javax.swing.JPanel {
         Text4.setText("Telefono");
         add(Text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 110, -1));
 
-        telefono_empleado.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         telefono_empleado.setForeground(new java.awt.Color(102, 102, 102));
         telefono_empleado.setText("Ingrese el Telefono del Empleado");
         telefono_empleado.setBorder(null);
@@ -274,7 +269,6 @@ public class Empleado extends javax.swing.JPanel {
         Text11.setText("Correo Electrónico");
         add(Text11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 180, -1));
 
-        correo_empleado.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         correo_empleado.setForeground(new java.awt.Color(102, 102, 102));
         correo_empleado.setText("Ingrese el Correo Electronico del Empleado");
         correo_empleado.setBorder(null);
@@ -298,7 +292,6 @@ public class Empleado extends javax.swing.JPanel {
         Text12.setText("Dirección");
         add(Text12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 140, -1));
 
-        direccion_empleado.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         direccion_empleado.setForeground(new java.awt.Color(102, 102, 102));
         direccion_empleado.setText("Ingrese la Dirección del Empleado");
         direccion_empleado.setBorder(null);
@@ -319,6 +312,11 @@ public class Empleado extends javax.swing.JPanel {
         add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 370, 300, 10));
 
         btnaddempleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/addempleado2.png"))); // NOI18N
+        btnaddempleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnaddempleadoMouseClicked(evt);
+            }
+        });
         add(btnaddempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
 
         btnbuscarempleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnbuscar.png"))); // NOI18N
@@ -729,6 +727,93 @@ public class Empleado extends javax.swing.JPanel {
     char c = evt.getKeyChar();
     if(c<'0' || c>'9') evt.consume();
     }//GEN-LAST:event_telefono_empleadoKeyTyped
+
+    private void btnaddempleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnaddempleadoMouseClicked
+        try {
+            // TODO add your handling code here:
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            
+            if(correo_empleado.getText().contains("@") && correo_empleado.getText().contains(".")){
+                if(telefono_empleado.getText().length()==10){
+                    if(snombre_empleado.getText().equals("Ingrese el Segundo Nombre del Empleado") && sapellido_empleado.getText().equals("Ingrese el Segundo Apellido del Empleado")){
+                        String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim()+",'"+pnombre_empleado.getText().trim()+"','','"+papellido_empleado.getText().trim()+"','',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')");
+                        JOptionPane.showMessageDialog(this, "Registro Exitoso!");
+                        con.consultar(query);
+                        
+                        con.cerrar();
+                        cedula_empleado.setText(null);
+                        pnombre_empleado.setText(null);
+                        snombre_empleado.setText(null);
+                        papellido_empleado.setText(null);
+                        sapellido_empleado.setText(null);
+                        telefono_empleado.setText(null);
+                        correo_empleado.setText(null);
+                        direccion_empleado.setText(null);
+                    }
+                    else if(snombre_empleado.getText().equals("Ingrese el Segundo Nombre del Empleado")){
+                        String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim()+",'"+pnombre_empleado.getText().trim()+"','','"+papellido_empleado.getText().trim()+"','','"+sapellido_empleado.getText().trim()+"',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')");
+                        JOptionPane.showMessageDialog(this, "Registro Exitoso!");
+                        con.consultar(query);
+                        
+                        con.cerrar();
+                        cedula_empleado.setText(null);
+                        pnombre_empleado.setText(null);
+                        snombre_empleado.setText(null);
+                        papellido_empleado.setText(null);
+                        sapellido_empleado.setText(null);
+                        telefono_empleado.setText(null);
+                        correo_empleado.setText(null);
+                        direccion_empleado.setText(null);
+                    }
+                    else if(sapellido_empleado.getText().equals("Ingrese el Segundo Apellido del Empleado")){
+                        String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim()+",'"+pnombre_empleado.getText().trim()+"','','"+snombre_empleado.getText().trim()+"','','"+papellido_empleado.getText().trim()+"','',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')");
+                        JOptionPane.showMessageDialog(this, "Registro Exitoso!");
+                        con.consultar(query);
+                        
+                        con.cerrar();
+                        cedula_empleado.setText(null);
+                        pnombre_empleado.setText(null);
+                        snombre_empleado.setText(null);
+                        papellido_empleado.setText(null);
+                        sapellido_empleado.setText(null);
+                        telefono_empleado.setText(null);
+                        correo_empleado.setText(null);
+                        direccion_empleado.setText(null);
+                    }
+                    else{
+                        String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim())+",'"+pnombre_empleado.getText().trim()+"','','"+snombre_empleado.getText().trim()+"','','"+papellido_empleado.getText().trim()+"','','"+sapellido_empleado.getText().trim()+"',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')";
+                        JOptionPane.showMessageDialog(this, "Registro Exitoso!");
+                        con.consultar(query);
+                        
+                        con.cerrar();
+                        cedula_empleado.setText(null);
+                        pnombre_empleado.setText(null);
+                        snombre_empleado.setText(null);
+                        papellido_empleado.setText(null);
+                        sapellido_empleado.setText(null);
+                        telefono_empleado.setText(null);
+                        correo_empleado.setText(null);
+                        direccion_empleado.setText(null);
+                    }
+                }
+                else{
+                    JOptionPane.showMessageDialog(this, "Telefono Invalido!");
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Correo Invalido!");
+            }
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnaddempleadoMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

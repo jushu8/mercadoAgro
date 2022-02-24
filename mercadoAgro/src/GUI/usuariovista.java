@@ -45,7 +45,7 @@ public class usuariovista extends javax.swing.JFrame {
         imgfondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnentrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btninicio2.png"))); // NOI18N
-        btnentrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnentrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnentrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnentrarMouseClicked(evt);
@@ -53,7 +53,7 @@ public class usuariovista extends javax.swing.JFrame {
         });
         imgfondo.add(btnentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 130, 30));
 
-        checkbox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        checkbox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         checkbox1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         checkbox1.setLabel("Recuerdame");
         imgfondo.add(checkbox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, -1, -1));
@@ -66,10 +66,20 @@ public class usuariovista extends javax.swing.JFrame {
         usuario.setForeground(new java.awt.Color(204, 204, 204));
         usuario.setText("Ingrese Usuario");
         usuario.setToolTipText("");
+        usuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                usuarioKeyPressed(evt);
+            }
+        });
         imgfondo.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 145, 168, 35));
 
         contraseña.setForeground(new java.awt.Color(204, 204, 204));
         contraseña.setText("******");
+        contraseña.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                contraseñaKeyPressed(evt);
+            }
+        });
         imgfondo.add(contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 211, 168, 35));
 
         lgusuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lgusuario2.png"))); // NOI18N
@@ -100,6 +110,33 @@ public class usuariovista extends javax.swing.JFrame {
         
      
     }//GEN-LAST:event_btnentrarMouseClicked
+
+    private void usuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usuarioKeyPressed
+        // TODO add your handling code here:
+        if(usuario.getText().equals("Ingrese Usuario")){
+            usuario.setText("");
+            usuario.setForeground(Color.BLACK);
+        }
+        
+        if(String.valueOf(contraseña.getPassword()).isEmpty()){
+            contraseña.setText("******");
+            contraseña.setForeground(Color.GRAY);
+            
+        }
+    }//GEN-LAST:event_usuarioKeyPressed
+
+    private void contraseñaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_contraseñaKeyPressed
+        // TODO add your handling code here:
+        if(String.valueOf(contraseña.getPassword()).equals("******")){
+            contraseña.setText("");
+            contraseña.setForeground(Color.BLACK);
+        }
+        
+        if(usuario.getText().isEmpty()){
+            usuario.setText("Ingrese Usuario");
+            usuario.setForeground(Color.GRAY);
+        }
+    }//GEN-LAST:event_contraseñaKeyPressed
 
     /**
      * @param args the command line arguments
