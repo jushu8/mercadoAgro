@@ -95,6 +95,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         nombr = new javax.swing.JLabel();
         fecha = new javax.swing.JLabel();
         horatxt = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         fondoico2 = new javax.swing.JLabel();
         jpmostrar = new javax.swing.JPanel();
         imgmostrarbg = new javax.swing.JLabel();
@@ -112,7 +113,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         imgventas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         imgreporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/facturacion2.png"))); // NOI18N
-        imgreporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imgreporte.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         imgreporte.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 imgreporteMouseClicked(evt);
@@ -121,7 +122,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         imgventas.add(imgreporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 203, -1, -1));
 
         imgcategoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/estadotienda2.png"))); // NOI18N
-        imgcategoria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imgcategoria.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         imgcategoria.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 imgcategoriaMouseClicked(evt);
@@ -130,7 +131,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         imgventas.add(imgcategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 264, -1, -1));
 
         imgproveedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/proveedor2.png"))); // NOI18N
-        imgproveedor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imgproveedor.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         imgproveedor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 imgproveedorMouseClicked(evt);
@@ -139,7 +140,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         imgventas.add(imgproveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 325, -1, -1));
 
         imghogar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/hogar2.png"))); // NOI18N
-        imghogar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imghogar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         imghogar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 imghogarMouseClicked(evt);
@@ -148,7 +149,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         imgventas.add(imghogar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
         imgclientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contactos2.png"))); // NOI18N
-        imgclientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imgclientes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         imgclientes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 imgclientesMouseClicked(evt);
@@ -157,7 +158,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         imgventas.add(imgclientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 386, -1, -1));
 
         imginventario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/inventario2.png"))); // NOI18N
-        imginventario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imginventario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         imginventario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 imginventarioMouseClicked(evt);
@@ -196,7 +197,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         imgventas.add(invtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-115, 447, 113, 50));
 
         imgusuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/usuarios2.png"))); // NOI18N
-        imgusuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imgusuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         imgusuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 imgusuarioMouseClicked(evt);
@@ -210,7 +211,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         imgventas.add(usuariotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-115, 508, 113, 50));
 
         btnmenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/menu3.png"))); // NOI18N
-        btnmenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnmenu.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnmenu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnmenuMouseClicked(evt);
@@ -219,7 +220,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         imgventas.add(btnmenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         btncalculadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/calculadora2.png"))); // NOI18N
-        btncalculadora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btncalculadora.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btncalculadora.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btncalculadoraMouseClicked(evt);
@@ -228,7 +229,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         imgventas.add(btncalculadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(-35, 20, -1, -1));
 
         btnmusica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/musica2.png"))); // NOI18N
-        btnmusica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnmusica.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnmusica.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnmusicaMouseClicked(evt);
@@ -238,7 +239,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
 
         btninternet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/internet2.png"))); // NOI18N
         btninternet.setToolTipText("");
-        btninternet.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btninternet.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btninternet.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btninternetMouseClicked(evt);
@@ -247,7 +248,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         imgventas.add(btninternet, new org.netbeans.lib.awtextra.AbsoluteConstraints(-35, 20, -1, -1));
 
         imgventas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ventas2.png"))); // NOI18N
-        imgventas1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        imgventas1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         imgventas1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 imgventas1MouseClicked(evt);
@@ -277,6 +278,14 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         horatxt.setText("00:00:00");
         imgventas.add(horatxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 610, -1, -1));
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        imgventas.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
+
         fondoico2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoico2.jpg"))); // NOI18N
         imgventas.add(fondoico2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 640));
 
@@ -296,7 +305,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         jphead.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btncerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/apagar.png"))); // NOI18N
-        btncerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btncerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btncerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btncerrarMouseClicked(evt);
@@ -305,7 +314,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         jphead.add(btncerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 0, -1, 30));
 
         btnminimi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/minimizar.png"))); // NOI18N
-        btnminimi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnminimi.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnminimi.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnminimiMouseClicked(evt);
@@ -507,6 +516,18 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
         ventass.jLabelXLeft(70, -115, 10, 5, ventastxt);
     }//GEN-LAST:event_imgventas1MouseClicked
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Empleado abrir = new Empleado();
+        abrir.setSize(740, 610);
+        abrir.setLocation(0, 0);
+
+        imgmostrarbg.removeAll();
+        imgmostrarbg.add(abrir, BorderLayout.CENTER);
+        imgmostrarbg.revalidate();
+        imgmostrarbg.repaint();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -567,6 +588,7 @@ public class iniciovista extends javax.swing.JFrame implements Runnable{
     private javax.swing.JPanel imgventas;
     private javax.swing.JLabel imgventas1;
     private javax.swing.JLabel invtxt;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jphead;
     private javax.swing.JPanel jpmostrar;

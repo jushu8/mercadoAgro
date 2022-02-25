@@ -320,9 +320,19 @@ public class Empleado extends javax.swing.JPanel {
         add(btnaddempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
 
         btnbuscarempleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnbuscar.png"))); // NOI18N
+        btnbuscarempleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnbuscarempleadoMouseClicked(evt);
+            }
+        });
         add(btnbuscarempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 420, -1, -1));
 
         btneditempleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnedit.png"))); // NOI18N
+        btneditempleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btneditempleadoMouseClicked(evt);
+            }
+        });
         add(btneditempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, -1, -1));
 
         btnmostrarempleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnmostrar.png"))); // NOI18N
@@ -737,9 +747,9 @@ public class Empleado extends javax.swing.JPanel {
             if(correo_empleado.getText().contains("@") && correo_empleado.getText().contains(".")){
                 if(telefono_empleado.getText().length()==10){
                     if(snombre_empleado.getText().equals("Ingrese el Segundo Nombre del Empleado") && sapellido_empleado.getText().equals("Ingrese el Segundo Apellido del Empleado")){
-                        String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim()+",'"+pnombre_empleado.getText().trim()+"','','"+papellido_empleado.getText().trim()+"','',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')");
+                        String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim())+",'"+pnombre_empleado.getText().trim()+"','','"+papellido_empleado.getText().trim()+"','',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')";
                         JOptionPane.showMessageDialog(this, "Registro Exitoso!");
-                        con.consultar(query);
+                        con.actualizar(query);
                         
                         con.cerrar();
                         cedula_empleado.setText(null);
@@ -752,9 +762,9 @@ public class Empleado extends javax.swing.JPanel {
                         direccion_empleado.setText(null);
                     }
                     else if(snombre_empleado.getText().equals("Ingrese el Segundo Nombre del Empleado")){
-                        String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim()+",'"+pnombre_empleado.getText().trim()+"','','"+papellido_empleado.getText().trim()+"','','"+sapellido_empleado.getText().trim()+"',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')");
+                        String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim())+",'"+pnombre_empleado.getText().trim()+"','"+papellido_empleado.getText().trim()+"','"+sapellido_empleado.getText().trim()+"',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')";
                         JOptionPane.showMessageDialog(this, "Registro Exitoso!");
-                        con.consultar(query);
+                        con.actualizar(query);
                         
                         con.cerrar();
                         cedula_empleado.setText(null);
@@ -767,9 +777,9 @@ public class Empleado extends javax.swing.JPanel {
                         direccion_empleado.setText(null);
                     }
                     else if(sapellido_empleado.getText().equals("Ingrese el Segundo Apellido del Empleado")){
-                        String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim()+",'"+pnombre_empleado.getText().trim()+"','','"+snombre_empleado.getText().trim()+"','','"+papellido_empleado.getText().trim()+"','',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')");
+                        String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim())+",'"+pnombre_empleado.getText().trim()+"','"+snombre_empleado.getText().trim()+"','"+papellido_empleado.getText().trim()+"',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')";
                         JOptionPane.showMessageDialog(this, "Registro Exitoso!");
-                        con.consultar(query);
+                        con.actualizar(query);
                         
                         con.cerrar();
                         cedula_empleado.setText(null);
@@ -782,9 +792,9 @@ public class Empleado extends javax.swing.JPanel {
                         direccion_empleado.setText(null);
                     }
                     else{
-                        String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim())+",'"+pnombre_empleado.getText().trim()+"','','"+snombre_empleado.getText().trim()+"','','"+papellido_empleado.getText().trim()+"','','"+sapellido_empleado.getText().trim()+"',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')";
+                        String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim())+",'"+pnombre_empleado.getText().trim()+"','"+snombre_empleado.getText().trim()+"','"+papellido_empleado.getText().trim()+"','"+sapellido_empleado.getText().trim()+"',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')";
                         JOptionPane.showMessageDialog(this, "Registro Exitoso!");
-                        con.consultar(query);
+                        con.actualizar(query);
                         
                         con.cerrar();
                         cedula_empleado.setText(null);
@@ -814,6 +824,83 @@ public class Empleado extends javax.swing.JPanel {
             Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnaddempleadoMouseClicked
+
+    private void btnbuscarempleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbuscarempleadoMouseClicked
+        // TODO add your handling code here:
+        try {
+            
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            
+            String query = "SELECT * FROM empleado WHERE cedula_empleado = "+ Long.parseLong(cedula_empleado.getText().trim());
+            ResultSet rs = con.consultar(query);
+            
+            if(rs.next()){
+                
+                cedula_empleado.setText(rs.getString("cedula_empleado"));
+                pnombre_empleado.setText(rs.getString("pnombre_empleado"));
+                snombre_empleado.setText(rs.getString("snombre_empleado"));
+                papellido_empleado.setText(rs.getString("papellido_empleado"));
+                sapellido_empleado.setText(rs.getString("sapellido_empleado"));
+                telefono_empleado.setText(rs.getString("telefono_empleado"));
+                correo_empleado.setText(rs.getString("correo_empleado"));
+                direccion_empleado.setText(rs.getString("direccion_empleado"));
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "No existe el empleado");
+            }
+            cedula_empleado.setForeground(Color.BLACK);
+                pnombre_empleado.setForeground(Color.BLACK);
+                snombre_empleado.setForeground(Color.BLACK);
+                papellido_empleado.setForeground(Color.BLACK);
+                sapellido_empleado.setForeground(Color.BLACK);
+                telefono_empleado.setForeground(Color.BLACK);
+                correo_empleado.setForeground(Color.BLACK);
+                direccion_empleado.setForeground(Color.BLACK);
+                
+                con.cerrar();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_btnbuscarempleadoMouseClicked
+
+    private void btneditempleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btneditempleadoMouseClicked
+        try {
+            // TODO add your handling code here:
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            
+            String query = "UPDATE empleado SET pnombre_empleado = '"+pnombre_empleado.getText().trim()+"',snombre_empleado = '"+snombre_empleado.getText().trim()+"', papellido_empleado = '"+papellido_empleado.getText().trim()+"', sapellido_empleado = '"+sapellido_empleado.getText().trim()+"', telefono_empleado = "+Long.parseLong(telefono_empleado.getText().trim())+", correo_empleado = '"+correo_empleado.getText().trim()+"', direccion_empleado = '"+direccion_empleado.getText().trim()+"' WHERE cedula_empleado = "+Long.parseLong(cedula_empleado.getText().trim())+"";
+            JOptionPane.showMessageDialog(this, "Datos Actualizaos Correctamente!");
+            con.actualizar(query);
+            
+            con.cerrar();
+            cedula_empleado.setText(null);
+            pnombre_empleado.setText(null);
+            snombre_empleado.setText(null);
+            papellido_empleado.setText(null);
+            sapellido_empleado.setText(null);
+            telefono_empleado.setText(null);
+            correo_empleado.setText(null);
+            direccion_empleado.setText(null);
+            
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btneditempleadoMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
