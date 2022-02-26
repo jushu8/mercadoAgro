@@ -156,7 +156,6 @@ public class Producto extends javax.swing.JPanel {
         Text3.setText("Id Producto");
         add(Text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, -1));
 
-        id_producto.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         id_producto.setForeground(new java.awt.Color(102, 102, 102));
         id_producto.setText("Ingrese el Id del Producto");
         id_producto.setBorder(null);
@@ -185,7 +184,6 @@ public class Producto extends javax.swing.JPanel {
         Text6.setText("Nombre Producto");
         add(Text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 140, -1));
 
-        nombre_producto.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         nombre_producto.setForeground(new java.awt.Color(102, 102, 102));
         nombre_producto.setText("Ingrese el Nombre del Producto");
         nombre_producto.setBorder(null);
@@ -214,7 +212,6 @@ public class Producto extends javax.swing.JPanel {
         Text7.setText("Descripcion Producto");
         add(Text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 190, -1));
 
-        descripcion_producto.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         descripcion_producto.setForeground(new java.awt.Color(102, 102, 102));
         descripcion_producto.setText("Ingrese la Descripcion del Producto");
         descripcion_producto.setBorder(null);
@@ -254,7 +251,6 @@ public class Producto extends javax.swing.JPanel {
         Text11.setText("Strock Minimo Producto");
         add(Text11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 180, -1));
 
-        stockminimo_producto.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         stockminimo_producto.setForeground(new java.awt.Color(102, 102, 102));
         stockminimo_producto.setText("Ingrese el Stock Minimo del Producto");
         stockminimo_producto.setBorder(null);
@@ -283,7 +279,6 @@ public class Producto extends javax.swing.JPanel {
         Text12.setText("Existencia Producto");
         add(Text12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 140, -1));
 
-        existencia_producto.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         existencia_producto.setForeground(new java.awt.Color(102, 102, 102));
         existencia_producto.setText("Ingrese la Existencia del Producto");
         existencia_producto.setBorder(null);
@@ -327,7 +322,6 @@ public class Producto extends javax.swing.JPanel {
         Text13.setText("Valor Producto");
         add(Text13, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 180, -1));
 
-        valor_producto.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         valor_producto.setForeground(new java.awt.Color(102, 102, 102));
         valor_producto.setText("Ingrese el Valor del Producto");
         valor_producto.setBorder(null);
@@ -353,19 +347,34 @@ public class Producto extends javax.swing.JPanel {
         add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 370, 300, 10));
 
         addproducto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/addproducto2.png"))); // NOI18N
-        addproducto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        addproducto.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        addproducto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addproductoMouseClicked(evt);
+            }
+        });
         add(addproducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, -1, -1));
 
         buscarproducto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnbuscar2.png"))); // NOI18N
-        buscarproducto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buscarproducto.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        buscarproducto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buscarproductoMouseClicked(evt);
+            }
+        });
         add(buscarproducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, -1, 50));
 
         editproducto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnedit.png"))); // NOI18N
-        editproducto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        editproducto.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        editproducto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                editproductoMouseClicked(evt);
+            }
+        });
         add(editproducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, -1, -1));
 
         mostrarproducto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnmostrar.png"))); // NOI18N
-        mostrarproducto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        mostrarproducto.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(mostrarproducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 430, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -614,6 +623,113 @@ public class Producto extends javax.swing.JPanel {
     private void id_familiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_familiaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_id_familiaActionPerformed
+
+    private void addproductoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addproductoMouseClicked
+        try {
+            // TODO add your handling code here:
+            String item1 = (String) id_familia.getSelectedItem();
+            java.util.StringTokenizer st = new java.util.StringTokenizer(item1, "-");
+            String id_f= st.nextToken(); 
+            
+            String item2 = (String) nit_proveedor.getSelectedItem();
+            java.util.StringTokenizer st1 = new java.util.StringTokenizer(item2, "-");
+            String nit_p= st1.nextToken(); 
+            
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            String query ="insert into producto values("+Long.parseLong(id_producto.getText().trim())+",'"+nombre_producto.getText().trim()+"','"+descripcion_producto.getText().trim()+"',"+ Long.parseLong(id_f) +","+ Long.parseLong(nit_p) +","+Long.parseLong(existencia_producto.getText().trim())+","+ Long.parseLong(stockminimo_producto.getText().trim()) +","+ Double.parseDouble(valor_producto.getText().trim()) +")";
+            JOptionPane.showMessageDialog(this, "Registro exitoso");
+            con.actualizar(query);
+
+            con.cerrar();
+            nombre_producto.setText(null);
+            id_producto.setText(null);
+            descripcion_producto.setText(null);
+            stockminimo_producto.setText(null);
+            existencia_producto.setText(null);
+            valor_producto.setText(null);
+            nit_proveedor.setSelectedItem("Seleccione");
+            id_familia.setSelectedItem("Seleccione");
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Producto.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Producto.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Producto.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Producto.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_addproductoMouseClicked
+
+    private void buscarproductoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buscarproductoMouseClicked
+        try {
+            // TODO add your handling code here:
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+
+            String query ="SELECT * FROM producto WHERE id_producto = "+ Long.parseLong(id_producto.getText().trim());
+
+            ResultSet rs = con.consultar(query);
+
+            if(rs.next()){
+                nombre_producto.setText(rs.getString("nombre_producto"));
+                descripcion_producto.setText(rs.getString("descripcion_producto"));
+                stockminimo_producto.setText(rs.getString("stockminimo_producto"));
+                existencia_producto.setText(rs.getString("existencia_producto"));
+                valor_producto.setText(rs.getString("valor_producto"));
+                
+                
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "No existe el Producto");
+            }
+            id_producto.setForeground(Color.black);
+            valor_producto.setForeground(Color.black);
+            descripcion_producto.setForeground(Color.black);
+            stockminimo_producto.setForeground(Color.black);
+            nombre_producto.setForeground(Color.black);
+            existencia_producto.setForeground(Color.black);
+            con.cerrar();    
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Producto.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Producto.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Producto.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Producto.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_buscarproductoMouseClicked
+
+    private void editproductoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editproductoMouseClicked
+        try {
+            // TODO add your handling code here:
+            String item1 = (String) id_familia.getSelectedItem();
+            java.util.StringTokenizer st = new java.util.StringTokenizer(item1, "-");
+            String id_f= st.nextToken(); 
+            
+            String item2 = (String) nit_proveedor.getSelectedItem();
+            java.util.StringTokenizer st1 = new java.util.StringTokenizer(item2, "-");
+            String nit_p= st1.nextToken();
+            
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+
+            String query ="update producto set nombre_producto = '"+ nombre_producto.getText().trim()+"', descripcion_producto='"+descripcion_producto.getText().trim()+"', id_familia="+ Long.parseLong(id_f) +", nit_proveedor="+ Long.parseLong(nit_p) +", stockminimo_producto="+Long.parseLong(stockminimo_producto.getText().trim())+",existencia_producto="+Long.parseLong(existencia_producto.getText().trim())+", valor_producto="+Long.parseLong(valor_producto.getText().trim())+" where id_producto="+Long.parseLong(id_producto.getText().trim());
+            JOptionPane.showMessageDialog(this, "Datos Actualizados");
+            con.actualizar(query);
+
+            con.cerrar();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Producto.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Producto.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Producto.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Producto.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_editproductoMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import clases.Conexion;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.sql.Connection;
@@ -100,7 +101,6 @@ public class clientevista extends javax.swing.JPanel {
         Text3.setText("Primer Nombre ");
         add(Text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, -1));
 
-        pnombre_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         pnombre_cliente.setForeground(new java.awt.Color(102, 102, 102));
         pnombre_cliente.setText("Ingrese el Primer Nombre del Cliente");
         pnombre_cliente.setBorder(null);
@@ -129,7 +129,6 @@ public class clientevista extends javax.swing.JPanel {
         Text6.setText("Segundo Nombre");
         add(Text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 140, -1));
 
-        snombre_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         snombre_cliente.setForeground(new java.awt.Color(102, 102, 102));
         snombre_cliente.setText("Ingrese el Segundo Nombre del Cliente");
         snombre_cliente.setBorder(null);
@@ -158,7 +157,6 @@ public class clientevista extends javax.swing.JPanel {
         Text7.setText("Primer Apellido");
         add(Text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 190, -1));
 
-        papellido_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         papellido_cliente.setForeground(new java.awt.Color(102, 102, 102));
         papellido_cliente.setText("Ingrese el Primer Apellido del Cliente");
         papellido_cliente.setBorder(null);
@@ -187,7 +185,6 @@ public class clientevista extends javax.swing.JPanel {
         Text8.setText("Segundo Apellido");
         add(Text8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 150, -1));
 
-        sapellido_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         sapellido_cliente.setForeground(new java.awt.Color(102, 102, 102));
         sapellido_cliente.setText("Ingrese el Segundo Apellido del Cliente");
         sapellido_cliente.setBorder(null);
@@ -216,7 +213,6 @@ public class clientevista extends javax.swing.JPanel {
         Text9.setText("Numero de Documento");
         add(Text9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 80, 180, -1));
 
-        cedula_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         cedula_cliente.setForeground(new java.awt.Color(102, 102, 102));
         cedula_cliente.setText("Ingrese el Numero de Documento del Cliente");
         cedula_cliente.setBorder(null);
@@ -245,7 +241,6 @@ public class clientevista extends javax.swing.JPanel {
         Text4.setText("Telefono");
         add(Text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 110, -1));
 
-        telefono_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         telefono_cliente.setForeground(new java.awt.Color(102, 102, 102));
         telefono_cliente.setText("Ingrese el Telefono del Cliente");
         telefono_cliente.setBorder(null);
@@ -274,7 +269,6 @@ public class clientevista extends javax.swing.JPanel {
         Text11.setText("Correo Electrónico");
         add(Text11, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 180, -1));
 
-        correo_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         correo_cliente.setForeground(new java.awt.Color(102, 102, 102));
         correo_cliente.setText("Ingrese el Correo Electronico del Cliente");
         correo_cliente.setBorder(null);
@@ -298,7 +292,6 @@ public class clientevista extends javax.swing.JPanel {
         Text12.setText("Dirección");
         add(Text12, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, 140, -1));
 
-        direccion_cliente.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         direccion_cliente.setForeground(new java.awt.Color(102, 102, 102));
         direccion_cliente.setText("Ingrese la Dirección del Cliente");
         direccion_cliente.setBorder(null);
@@ -320,14 +313,29 @@ public class clientevista extends javax.swing.JPanel {
 
         btnagregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnadduser.png"))); // NOI18N
         btnagregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnagregar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnagregarMouseClicked(evt);
+            }
+        });
         add(btnagregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, -1, -1));
 
         btnbuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnbuscar.png"))); // NOI18N
         btnbuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnbuscar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnbuscarMouseClicked(evt);
+            }
+        });
         add(btnbuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 410, -1, -1));
 
         btneditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnedit.png"))); // NOI18N
         btneditar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btneditar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btneditarMouseClicked(evt);
+            }
+        });
         add(btneditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 410, -1, -1));
 
         btnmostrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnmostrar.png"))); // NOI18N
@@ -732,6 +740,170 @@ public class clientevista extends javax.swing.JPanel {
     char c = evt.getKeyChar();
     if(c<'0' || c>'9') evt.consume();
     }//GEN-LAST:event_telefono_clienteKeyTyped
+
+    private void btnagregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnagregarMouseClicked
+        try {
+            // TODO add your handling code here:
+            
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            
+            if(correo_cliente.getText().contains("@") && correo_cliente.getText().contains(".")){
+                if(telefono_cliente.getText().length()==10){
+                    if(snombre_cliente.getText().equals("Ingrese el Segundo Nombre del Cliente") && sapellido_cliente.getText().equals("Ingrese el Segundo Apellido del Cliente")){
+                        String query = "INSERT INTO cliente VALUES ("+Long.parseLong(cedula_cliente.getText().trim())+",'"+pnombre_cliente.getText().trim()+"','','"+papellido_cliente.getText().trim()+"','',"+Long.parseLong(telefono_cliente.getText().trim())+",'"+correo_cliente.getText().trim()+"','"+direccion_cliente.getText().trim()+"')";
+                        JOptionPane.showMessageDialog(this, "Registro Exitoso!");
+                        con.actualizar(query);
+                        
+                        con.cerrar();
+                        cedula_cliente.setText(null);
+                        pnombre_cliente.setText(null);
+                        snombre_cliente.setText(null);
+                        papellido_cliente.setText(null);
+                        sapellido_cliente.setText(null);
+                        telefono_cliente.setText(null);
+                        correo_cliente.setText(null);
+                        direccion_cliente.setText(null);
+                    }
+                    else if(snombre_cliente.getText().equals("Ingrese el Segundo Nombre del Cliente")){
+                        String query = "INSERT INTO cliente VALUES ("+Long.parseLong(cedula_cliente.getText().trim())+",'"+pnombre_cliente.getText().trim()+"','"+papellido_cliente.getText().trim()+"','"+sapellido_cliente.getText().trim()+"',"+Long.parseLong(telefono_cliente.getText().trim())+",'"+correo_cliente.getText().trim()+"','"+direccion_cliente.getText().trim()+"')";
+                        JOptionPane.showMessageDialog(this, "Registro Exitoso!");
+                        con.actualizar(query);
+                        
+                        con.cerrar();
+                        cedula_cliente.setText(null);
+                        pnombre_cliente.setText(null);
+                        snombre_cliente.setText(null);
+                        papellido_cliente.setText(null);
+                        sapellido_cliente.setText(null);
+                        telefono_cliente.setText(null);
+                        correo_cliente.setText(null);
+                        direccion_cliente.setText(null);
+                    }
+                    else if(sapellido_cliente.getText().equals("Ingrese el Segundo Apellido del cliente")){
+                        String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_cliente.getText().trim())+",'"+pnombre_cliente.getText().trim()+"','"+snombre_cliente.getText().trim()+"','"+papellido_cliente.getText().trim()+"',"+Long.parseLong(telefono_cliente.getText().trim())+",'"+correo_cliente.getText().trim()+"','"+direccion_cliente.getText().trim()+"')";
+                        JOptionPane.showMessageDialog(this, "Registro Exitoso!");
+                        con.actualizar(query);
+                        
+                        con.cerrar();
+                        cedula_cliente.setText(null);
+                        pnombre_cliente.setText(null);
+                        snombre_cliente.setText(null);
+                        papellido_cliente.setText(null);
+                        sapellido_cliente.setText(null);
+                        telefono_cliente.setText(null);
+                        correo_cliente.setText(null);
+                        direccion_cliente.setText(null);
+                    }
+                    else{
+                        String query = "INSERT INTO cliente VALUES ("+Long.parseLong(cedula_cliente.getText().trim())+",'"+pnombre_cliente.getText().trim()+"','"+snombre_cliente.getText().trim()+"','"+papellido_cliente.getText().trim()+"','"+sapellido_cliente.getText().trim()+"',"+Long.parseLong(telefono_cliente.getText().trim())+",'"+correo_cliente.getText().trim()+"','"+direccion_cliente.getText().trim()+"')";
+                        JOptionPane.showMessageDialog(this, "Registro Exitoso!");
+                        con.actualizar(query);
+                        
+                        con.cerrar();
+                        cedula_cliente.setText(null);
+                        pnombre_cliente.setText(null);
+                        snombre_cliente.setText(null);
+                        papellido_cliente.setText(null);
+                        sapellido_cliente.setText(null);
+                        telefono_cliente.setText(null);
+                        correo_cliente.setText(null);
+                        direccion_cliente.setText(null);
+                    }
+                }
+                else{
+                    JOptionPane.showMessageDialog(this, "Telefono Invalido!");
+                }
+                
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Correo Invalido!");
+            }
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(clientevista.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(clientevista.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(clientevista.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(clientevista.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+    }//GEN-LAST:event_btnagregarMouseClicked
+
+    private void btnbuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbuscarMouseClicked
+        try {
+            // TODO add your handling code here:
+            
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            
+            String query ="select * from cliente where cedula_cliente = "+ Long.parseLong(cedula_cliente.getText().trim());
+            ResultSet rs = con.consultar(query);
+            
+            if(rs.next()){
+                pnombre_cliente.setText(rs.getString("pnombre_cliente"));
+                snombre_cliente.setText(rs.getString("snombre_cliente"));
+                papellido_cliente.setText(rs.getString("papellido_cliente"));
+                sapellido_cliente.setText(rs.getString("sapellido_cliente"));
+                telefono_cliente.setText(rs.getString("telefono_cliente"));
+                correo_cliente.setText(rs.getString("correo_cliente"));
+                direccion_cliente.setText(rs.getString("direccion_cliente"));
+            }
+            
+            else{
+                JOptionPane.showMessageDialog(this, "No existe el Cliente");
+            }
+            pnombre_cliente.setForeground(Color.black);
+            snombre_cliente.setForeground(Color.black);
+            papellido_cliente.setForeground(Color.black);
+            sapellido_cliente.setForeground(Color.black);
+            correo_cliente.setForeground(Color.black);
+            telefono_cliente.setForeground(Color.black);
+            direccion_cliente.setForeground(Color.black);
+            con.cerrar();
+            
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(clientevista.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(clientevista.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(clientevista.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(clientevista.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnbuscarMouseClicked
+
+    private void btneditarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btneditarMouseClicked
+        try {
+            // TODO add your handling code here:
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            
+            String query = "UPDATE cliente SET pnombre_cliente = '"+pnombre_cliente.getText().trim()+"',snombre_cliente = '"+snombre_cliente.getText().trim()+"', papellido_cliente = '"+papellido_cliente.getText().trim()+"', sapellido_cliente = '"+sapellido_cliente.getText().trim()+"', telefono_cliente = "+Long.parseLong(telefono_cliente.getText().trim())+", correo_cliente = '"+correo_cliente.getText().trim()+"', direccion_cliente = '"+direccion_cliente.getText().trim()+"' WHERE cedula_cliente = "+Long.parseLong(cedula_cliente.getText().trim())+"";
+            JOptionPane.showMessageDialog(this, "Datos Actualizaos Correctamente!");
+            con.actualizar(query);
+            
+            con.cerrar();
+            cedula_cliente.setText(null);
+            pnombre_cliente.setText(null);
+            snombre_cliente.setText(null);
+            papellido_cliente.setText(null);
+            sapellido_cliente.setText(null);
+            telefono_cliente.setText(null);
+            correo_cliente.setText(null);
+            direccion_cliente.setText(null);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(clientevista.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(clientevista.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(clientevista.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(clientevista.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btneditarMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

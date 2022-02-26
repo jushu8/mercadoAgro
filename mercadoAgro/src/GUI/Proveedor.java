@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import clases.Conexion;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.sql.Connection;
@@ -91,7 +92,6 @@ public class Proveedor extends javax.swing.JPanel {
         Text3.setText("Nit Proveedor");
         add(Text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, -1));
 
-        nit_proveedor.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         nit_proveedor.setForeground(new java.awt.Color(102, 102, 102));
         nit_proveedor.setText("Ingrese el Nit del Proveedor");
         nit_proveedor.setBorder(null);
@@ -120,7 +120,6 @@ public class Proveedor extends javax.swing.JPanel {
         Text6.setText("Nombre");
         add(Text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 140, -1));
 
-        nombre_proveedor.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         nombre_proveedor.setForeground(new java.awt.Color(102, 102, 102));
         nombre_proveedor.setText("Ingrese el Nombre del Proveedor");
         nombre_proveedor.setBorder(null);
@@ -149,7 +148,6 @@ public class Proveedor extends javax.swing.JPanel {
         Text7.setText("Telefono");
         add(Text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 190, -1));
 
-        telefono_proveedor.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         telefono_proveedor.setForeground(new java.awt.Color(102, 102, 102));
         telefono_proveedor.setText("Ingrese el Telefono del Proveedor");
         telefono_proveedor.setBorder(null);
@@ -178,7 +176,6 @@ public class Proveedor extends javax.swing.JPanel {
         Text8.setText("Correo");
         add(Text8, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, 150, -1));
 
-        correo_proveedor.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         correo_proveedor.setForeground(new java.awt.Color(102, 102, 102));
         correo_proveedor.setText("Ingrese el Correo del Proveedor");
         correo_proveedor.setBorder(null);
@@ -207,7 +204,6 @@ public class Proveedor extends javax.swing.JPanel {
         Text9.setText("Direccion");
         add(Text9, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 180, -1));
 
-        direccion_proveedor.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         direccion_proveedor.setForeground(new java.awt.Color(102, 102, 102));
         direccion_proveedor.setText("Ingrese la Direccion del Proveedor");
         direccion_proveedor.setBorder(null);
@@ -234,14 +230,29 @@ public class Proveedor extends javax.swing.JPanel {
 
         btnaddprove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/addprove2.png"))); // NOI18N
         btnaddprove.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnaddprove.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnaddproveMouseClicked(evt);
+            }
+        });
         add(btnaddprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, -1, -1));
 
         btnbuscarprove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnbuscar.png"))); // NOI18N
         btnbuscarprove.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnbuscarprove.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnbuscarproveMouseClicked(evt);
+            }
+        });
         add(btnbuscarprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 380, -1, -1));
 
         btneditprove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnedit.png"))); // NOI18N
         btneditprove.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btneditprove.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btneditproveMouseClicked(evt);
+            }
+        });
         add(btneditprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, -1, -1));
 
         btnmostrarprove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnmostrar.png"))); // NOI18N
@@ -435,6 +446,104 @@ public class Proveedor extends javax.swing.JPanel {
     private void direccion_proveedorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_direccion_proveedorKeyTyped
     
     }//GEN-LAST:event_direccion_proveedorKeyTyped
+
+    private void btnaddproveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnaddproveMouseClicked
+        try {
+            // TODO add your handling code here:
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            if(correo_proveedor.getText().contains("@") && correo_proveedor.getText().contains(".")){
+                if(telefono_proveedor.getText().length()==10){
+                    String query ="INSERT INTO proveedor VALUES("+ Long.parseLong(nit_proveedor.getText().trim())+ ",'" + nombre_proveedor.getText().trim() + "','" + correo_proveedor.getText().trim() + "',"+ Long.parseLong(telefono_proveedor.getText().trim())+ ",'"+ direccion_proveedor.getText().trim() +"')";
+                    JOptionPane.showMessageDialog(this, "Registro exitoso");
+                    con.actualizar(query);
+                    
+                    con.cerrar();
+                    nit_proveedor.setText(null);
+                    nombre_proveedor.setText(null);
+                    direccion_proveedor.setText(null);
+                    correo_proveedor.setText(null);
+                    telefono_proveedor.setText(null);
+                }
+                else{
+                    JOptionPane.showMessageDialog(this, "Telefono Invalido");
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Correo Invalido");
+            }
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnaddproveMouseClicked
+
+    private void btnbuscarproveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbuscarproveMouseClicked
+        try {
+            // TODO add your handling code here:
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            
+            String query ="select * from proveedor where nit_proveedor = "+ Integer.parseInt(nit_proveedor.getText().trim());
+            
+            ResultSet rs = con.consultar(query);
+            
+            if(rs.next()){
+                nombre_proveedor.setText(rs.getString("nombre_proveedor"));
+                correo_proveedor.setText(rs.getString("correo_proveedor"));
+                telefono_proveedor.setText(rs.getString("telefono_proveedor"));
+                direccion_proveedor.setText(rs.getString("direccion_proveedor"));
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "No existe el Proveedor");
+            }
+            con.cerrar();
+            nit_proveedor.setForeground(Color.black);
+            nombre_proveedor.setForeground(Color.black);
+            telefono_proveedor.setForeground(Color.black);
+            correo_proveedor.setForeground(Color.black);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnbuscarproveMouseClicked
+
+    private void btneditproveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btneditproveMouseClicked
+        try {
+            // TODO add your handling code here:
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            
+            String query ="update proveedor set nombre_proveedor = '"+nombre_proveedor.getText().trim()+"', correo_proveedor='"+correo_proveedor.getText().trim()+ "', telefono_proveedor="+ Long.parseLong(telefono_proveedor.getText().trim())+ ", direccion_proveedor = '"+ direccion_proveedor.getText().trim() +"' where nit_proveedor="+Long.parseLong(nit_proveedor.getText().trim());
+            JOptionPane.showMessageDialog(this, "Datos Actualizados");
+            con.actualizar(query);
+            
+            con.cerrar();
+            nit_proveedor.setText(null);
+            correo_proveedor.setText(null);
+            telefono_proveedor.setText(null);
+            direccion_proveedor.setText(null);        
+            nombre_proveedor.setText(null);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Proveedor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btneditproveMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
