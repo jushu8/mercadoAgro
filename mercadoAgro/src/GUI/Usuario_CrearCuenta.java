@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import clases.Conexion;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.sql.Connection;
@@ -160,6 +161,11 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
         add(loguser, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 30, 30));
 
         btnadduser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/adduser2.png"))); // NOI18N
+        btnadduser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnadduserMouseClicked(evt);
+            }
+        });
         add(btnadduser, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -207,6 +213,36 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
             confirmacionpass.setForeground(Color.gray);
         }
     }//GEN-LAST:event_user_usuarioMousePressed
+
+    private void btnadduserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnadduserMouseClicked
+        try {
+            // TODO add your handling code here:
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            String pass1= String.valueOf(pass_usuario.getPassword());
+            String pass2= String.valueOf(confirmacionpass.getPassword());
+
+            if(pass1.equals(pass2)){
+                String query ="INSERT INTO usuario VALUES('"+user_usuario.getText()+"','Vendedor','"+String.valueOf(pass_usuario.getPassword())+"')";
+                JOptionPane.showMessageDialog(this, "¡Cuenta creada con exito!");
+
+                con.actualizar(query);
+                                
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "¡Las contraseñas no coinciden!");
+            }
+            con.cerrar();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Usuario_CrearCuenta.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Usuario_CrearCuenta.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Usuario_CrearCuenta.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Usuario_CrearCuenta.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnadduserMouseClicked
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
