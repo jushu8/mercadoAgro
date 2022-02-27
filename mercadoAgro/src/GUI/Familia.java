@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import clases.Conexion;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.sql.Connection;
@@ -80,7 +81,6 @@ public class Familia extends javax.swing.JPanel {
         Text3.setText("Id Familia");
         add(Text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 160, -1));
 
-        codigo_familia.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         codigo_familia.setForeground(new java.awt.Color(102, 102, 102));
         codigo_familia.setText("Ingrese el Id de la Familia");
         codigo_familia.setBorder(null);
@@ -109,7 +109,6 @@ public class Familia extends javax.swing.JPanel {
         Text6.setText("Nombre Familia");
         add(Text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 140, -1));
 
-        nombre_familia.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         nombre_familia.setForeground(new java.awt.Color(102, 102, 102));
         nombre_familia.setText("Ingrese el Nombre de la Familia");
         nombre_familia.setBorder(null);
@@ -138,7 +137,6 @@ public class Familia extends javax.swing.JPanel {
         Text7.setText("Descripcion Familia");
         add(Text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 190, -1));
 
-        descripción_familia.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         descripción_familia.setForeground(new java.awt.Color(102, 102, 102));
         descripción_familia.setText("Ingrese la Descripcion de la Familia");
         descripción_familia.setBorder(null);
@@ -161,14 +159,29 @@ public class Familia extends javax.swing.JPanel {
         btnagregarfam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/addfamilia2.png"))); // NOI18N
         btnagregarfam.setToolTipText("");
         btnagregarfam.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnagregarfam.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnagregarfamMouseClicked(evt);
+            }
+        });
         add(btnagregarfam, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, -1, -1));
 
         btnbuscarfam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscarproduct2.png"))); // NOI18N
         btnbuscarfam.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnbuscarfam.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnbuscarfamMouseClicked(evt);
+            }
+        });
         add(btnbuscarfam, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 380, -1, -1));
 
         btneditfam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnedit.png"))); // NOI18N
         btneditfam.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btneditfam.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btneditfamMouseClicked(evt);
+            }
+        });
         add(btneditfam, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, -1, -1));
 
         btnmostrarfam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnmostrar.png"))); // NOI18N
@@ -256,6 +269,89 @@ public class Familia extends javax.swing.JPanel {
     private void nombre_familiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombre_familiaKeyTyped
     
     }//GEN-LAST:event_nombre_familiaKeyTyped
+
+    private void btnagregarfamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnagregarfamMouseClicked
+        try {
+            // TODO add your handling code here:
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            String query ="INSERT INTO familia VALUES("+ Long.parseLong(codigo_familia.getText().trim())+ ",'" + nombre_familia.getText().trim() + "','" + descripción_familia.getText().trim() +"')";
+            JOptionPane.showMessageDialog(this, "Registro exitoso");
+            con.actualizar(query);
+            
+            con.cerrar();
+            codigo_familia.setText(null);
+            nombre_familia.setText(null);
+            descripción_familia.setText(null);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Familia.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Familia.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Familia.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Familia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnagregarfamMouseClicked
+
+    private void btnbuscarfamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbuscarfamMouseClicked
+        try {
+            // TODO add your handling code here:
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            
+            String query ="SELECT * FROM familia WHERE id_familia = "+ Integer.parseInt(codigo_familia.getText().trim());
+            
+            ResultSet rs = con.consultar(query);
+            
+            if(rs.next()){
+                nombre_familia.setText(rs.getString("nombre_familia"));
+                descripción_familia.setText(rs.getString("descripcion_familia"));
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "No existe la Familia");
+            }
+            codigo_familia.setForeground(Color.black);
+            nombre_familia.setForeground(Color.black);
+            descripción_familia.setForeground(Color.black);
+            
+            con.cerrar();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Familia.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Familia.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Familia.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Familia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_btnbuscarfamMouseClicked
+
+    private void btneditfamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btneditfamMouseClicked
+        try {
+            // TODO add your handling code here:
+            Conexion con = new Conexion();
+            con.ConexionPostgres();
+            
+            String query ="UPDATE familia SET nombre_familia = '"+nombre_familia.getText().trim()+"', descripcion_familia='"+descripción_familia.getText().trim()+"' WHERE id_familia="+Long.parseLong(codigo_familia.getText().trim());
+            JOptionPane.showMessageDialog(this, "Datos Actualizados");
+            con.actualizar(query);
+            
+            con.cerrar();
+            codigo_familia.setText(null);
+            descripción_familia.setText(null);
+            nombre_familia.setText(null);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Familia.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Familia.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Familia.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Familia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btneditfamMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
