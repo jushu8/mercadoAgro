@@ -746,7 +746,7 @@ public class Empleado extends javax.swing.JPanel {
             
             if(correo_empleado.getText().contains("@") && correo_empleado.getText().contains(".")){
                 if(telefono_empleado.getText().length()==10){
-                    if(snombre_empleado.getText().equals("Ingrese el Segundo Nombre del Empleado") && sapellido_empleado.getText().equals("Ingrese el Segundo Apellido del Empleado")){
+                    if((snombre_empleado.getText().equals("Ingrese el Segundo Nombre del Empleado") || snombre_empleado.getText().equals("")) && (sapellido_empleado.getText().equals("Ingrese el Segundo Apellido del Empleado")|| sapellido_empleado.getText().equals(""))){
                         String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim())+",'"+pnombre_empleado.getText().trim()+"','','"+papellido_empleado.getText().trim()+"','',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')";
                         JOptionPane.showMessageDialog(this, "Registro Exitoso!");
                         con.actualizar(query);
@@ -761,7 +761,7 @@ public class Empleado extends javax.swing.JPanel {
                         correo_empleado.setText(null);
                         direccion_empleado.setText(null);
                     }
-                    else if(snombre_empleado.getText().equals("Ingrese el Segundo Nombre del Empleado")){
+                    else if(snombre_empleado.getText().equals("Ingrese el Segundo Nombre del Empleado") || snombre_empleado.getText().equals("")){
                         String query = "INSERT INTO empleado VALUES ("+Long.parseLong(cedula_empleado.getText().trim())+",'"+pnombre_empleado.getText().trim()+"','"+"',"+papellido_empleado.getText().trim()+"','"+sapellido_empleado.getText().trim()+"',"+Long.parseLong(telefono_empleado.getText().trim())+",'"+correo_empleado.getText().trim()+"','"+direccion_empleado.getText().trim()+"')";
                         JOptionPane.showMessageDialog(this, "Registro Exitoso!");
                         con.actualizar(query);

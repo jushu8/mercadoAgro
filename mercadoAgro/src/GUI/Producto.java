@@ -674,7 +674,7 @@ public class Producto extends javax.swing.JPanel {
             if(rs.next()){
                 nombre_producto.setText(rs.getString("nombre_producto"));
                 descripcion_producto.setText(rs.getString("descripcion_producto"));
-                stockminimo_producto.setText(rs.getString("stockminimo_producto"));
+                stockminimo_producto.setText(rs.getString("stock_minimo_producto"));
                 existencia_producto.setText(rs.getString("existencia_producto"));
                 valor_producto.setText(rs.getString("valor_producto"));
                 
@@ -715,7 +715,7 @@ public class Producto extends javax.swing.JPanel {
             Conexion con = new Conexion();
             con.ConexionPostgres();
 
-            String query ="update producto set nombre_producto = '"+ nombre_producto.getText().trim()+"', descripcion_producto='"+descripcion_producto.getText().trim()+"', id_familia="+ Long.parseLong(id_f) +", nit_proveedor="+ Long.parseLong(nit_p) +", stockminimo_producto="+Long.parseLong(stockminimo_producto.getText().trim())+",existencia_producto="+Long.parseLong(existencia_producto.getText().trim())+", valor_producto="+Long.parseLong(valor_producto.getText().trim())+" where id_producto="+Long.parseLong(id_producto.getText().trim());
+            String query ="update producto set nombre_producto = '"+ nombre_producto.getText().trim()+"', descripcion_producto='"+descripcion_producto.getText().trim()+"', id_familia="+ Long.parseLong(id_f) +", nit_proveedor="+ Long.parseLong(nit_p) +", stock_minimo_producto="+Long.parseLong(stockminimo_producto.getText().trim())+",existencia_producto="+Long.parseLong(existencia_producto.getText().trim())+", valor_producto="+Long.parseLong(valor_producto.getText().trim())+" where id_producto="+Long.parseLong(id_producto.getText().trim());
             JOptionPane.showMessageDialog(this, "Datos Actualizados");
             con.actualizar(query);
 
