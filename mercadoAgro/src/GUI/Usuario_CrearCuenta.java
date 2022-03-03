@@ -49,8 +49,6 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
         body = new javax.swing.JPanel();
         icon_logo1 = new javax.swing.JLabel();
         titulo1 = new javax.swing.JLabel();
-        logo = new javax.swing.JLabel();
-        fondo = new javax.swing.JLabel();
         passLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         confirmacionpass = new javax.swing.JPasswordField();
@@ -67,6 +65,7 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
         iniciosesion1 = new javax.swing.JLabel();
         loguser = new javax.swing.JLabel();
         btnadduser = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(750, 610));
@@ -86,10 +85,6 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
         titulo1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         titulo1.setText("AgroFacil");
         add(titulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
-
-        logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 290, 310));
-        add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 290, 500));
 
         passLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         passLabel1.setText("CONFIRMACION");
@@ -167,6 +162,9 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
             }
         });
         add(btnadduser, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoico5.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 620));
     }// </editor-fold>//GEN-END:initComponents
 
     private void confirmacionpassMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirmacionpassMousePressed
@@ -249,9 +247,9 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
     private javax.swing.JPanel body;
     private javax.swing.JLabel btnadduser;
     private javax.swing.JPasswordField confirmacionpass;
-    private javax.swing.JLabel fondo;
     private javax.swing.JLabel icon_logo1;
     private javax.swing.JLabel iniciosesion1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
@@ -259,7 +257,6 @@ public class Usuario_CrearCuenta extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JLabel logclave;
-    private javax.swing.JLabel logo;
     private javax.swing.JLabel loguser;
     private javax.swing.JLabel passLabel1;
     private javax.swing.JLabel passLabel2;

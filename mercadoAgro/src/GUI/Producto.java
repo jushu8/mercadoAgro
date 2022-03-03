@@ -132,6 +132,7 @@ public class Producto extends javax.swing.JPanel {
         buscarproducto = new javax.swing.JLabel();
         editproducto = new javax.swing.JLabel();
         mostrarproducto = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(750, 430));
@@ -376,6 +377,9 @@ public class Producto extends javax.swing.JPanel {
         mostrarproducto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnmostrar.png"))); // NOI18N
         mostrarproducto.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(mostrarproducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 430, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoico5.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 620));
     }// </editor-fold>//GEN-END:initComponents
 
     private void descripcion_productoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_descripcion_productoMousePressed
@@ -750,6 +754,7 @@ public class Producto extends javax.swing.JPanel {
     private javax.swing.JTextField existencia_producto;
     private javax.swing.JComboBox<String> id_familia;
     private javax.swing.JTextField id_producto;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;

@@ -5,6 +5,7 @@
 package GUI;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -28,6 +29,8 @@ public class usuariovista extends javax.swing.JFrame {
     private void initComponents() {
 
         imgfondo = new javax.swing.JPanel();
+        btnminimi = new javax.swing.JLabel();
+        btncerrar = new javax.swing.JLabel();
         btnentrar = new javax.swing.JLabel();
         checkbox1 = new java.awt.Checkbox();
         imglogo = new javax.swing.JLabel();
@@ -44,6 +47,24 @@ public class usuariovista extends javax.swing.JFrame {
 
         imgfondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnminimi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/minimizar.png"))); // NOI18N
+        btnminimi.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnminimi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnminimiMouseClicked(evt);
+            }
+        });
+        imgfondo.add(btnminimi, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, -1, -1));
+
+        btncerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/apagar.png"))); // NOI18N
+        btncerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btncerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btncerrarMouseClicked(evt);
+            }
+        });
+        imgfondo.add(btncerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, -1, 30));
+
         btnentrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btninicio2.png"))); // NOI18N
         btnentrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnentrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -51,16 +72,16 @@ public class usuariovista extends javax.swing.JFrame {
                 btnentrarMouseClicked(evt);
             }
         });
-        imgfondo.add(btnentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 130, 30));
+        imgfondo.add(btnentrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 130, 30));
 
         checkbox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         checkbox1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         checkbox1.setLabel("Recuerdame");
-        imgfondo.add(checkbox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, -1, -1));
+        imgfondo.add(checkbox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, -1, -1));
 
         imglogo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        imglogo.setText("LOGO");
-        imgfondo.add(imglogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, -1, -1));
+        imglogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo.png"))); // NOI18N
+        imgfondo.add(imglogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
 
         usuario.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         usuario.setForeground(new java.awt.Color(204, 204, 204));
@@ -71,7 +92,7 @@ public class usuariovista extends javax.swing.JFrame {
                 usuarioKeyPressed(evt);
             }
         });
-        imgfondo.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 145, 168, 35));
+        imgfondo.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 168, 35));
 
         contraseña.setForeground(new java.awt.Color(204, 204, 204));
         contraseña.setText("******");
@@ -80,27 +101,28 @@ public class usuariovista extends javax.swing.JFrame {
                 contraseñaKeyPressed(evt);
             }
         });
-        imgfondo.add(contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 211, 168, 35));
+        imgfondo.add(contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 168, 35));
 
         lgusuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lgusuario2.png"))); // NOI18N
-        imgfondo.add(lgusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 145, -1, 35));
+        imgfondo.add(lgusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, 35));
 
         lgpassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contrasena2.png"))); // NOI18N
-        imgfondo.add(lgpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 211, -1, 35));
+        imgfondo.add(lgpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, 35));
 
         fondousu.setBackground(new java.awt.Color(51, 255, 255));
         fondousu.setForeground(new java.awt.Color(51, 255, 255));
-        imgfondo.add(fondousu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 501, 340));
+        fondousu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondolog.jpg"))); // NOI18N
+        imgfondo.add(fondousu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 500));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(imgfondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(imgfondo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(imgfondo, javax.swing.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
+            .addComponent(imgfondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -137,6 +159,25 @@ public class usuariovista extends javax.swing.JFrame {
             usuario.setForeground(Color.GRAY);
         }
     }//GEN-LAST:event_contraseñaKeyPressed
+
+    private void btncerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrarMouseClicked
+
+        try{
+            int dialogButton =  JOptionPane.YES_NO_OPTION;
+            int result = JOptionPane.showConfirmDialog(null,"Desea cerrar el sistema?", "EXIT", dialogButton);
+            if(result == 0){
+                System.exit(0);
+            }
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(this, e);
+        }
+
+    }//GEN-LAST:event_btncerrarMouseClicked
+
+    private void btnminimiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnminimiMouseClicked
+
+        this.setState(GUI.iniciovista.ICONIFIED);
+    }//GEN-LAST:event_btnminimiMouseClicked
 
     /**
      * @param args the command line arguments
@@ -175,7 +216,9 @@ public class usuariovista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel btncerrar;
     private javax.swing.JLabel btnentrar;
+    private javax.swing.JLabel btnminimi;
     private java.awt.Checkbox checkbox1;
     private javax.swing.JPasswordField contraseña;
     private javax.swing.JLabel fondousu;

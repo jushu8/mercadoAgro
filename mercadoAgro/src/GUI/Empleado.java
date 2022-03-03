@@ -77,6 +77,13 @@ public class Empleado extends javax.swing.JPanel {
         btnbuscarempleado = new javax.swing.JLabel();
         btneditempleado = new javax.swing.JLabel();
         btnmostrarempleado = new javax.swing.JLabel();
+        Text10 = new javax.swing.JLabel();
+        sapellido_empleado1 = new javax.swing.JTextField();
+        jSeparator11 = new javax.swing.JSeparator();
+        Text13 = new javax.swing.JLabel();
+        sapellido_empleado2 = new javax.swing.JTextField();
+        jSeparator14 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(750, 430));
@@ -95,7 +102,7 @@ public class Empleado extends javax.swing.JPanel {
         jSeparator3.setForeground(new java.awt.Color(51, 51, 51));
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 10, 290));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 10, 370));
 
         Text3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Text3.setText("Primer Nombre ");
@@ -317,7 +324,7 @@ public class Empleado extends javax.swing.JPanel {
                 btnaddempleadoMouseClicked(evt);
             }
         });
-        add(btnaddempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
+        add(btnaddempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, -1, -1));
 
         btnbuscarempleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnbuscar.png"))); // NOI18N
         btnbuscarempleado.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -325,7 +332,7 @@ public class Empleado extends javax.swing.JPanel {
                 btnbuscarempleadoMouseClicked(evt);
             }
         });
-        add(btnbuscarempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 420, -1, -1));
+        add(btnbuscarempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 480, -1, -1));
 
         btneditempleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnedit.png"))); // NOI18N
         btneditempleado.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -333,10 +340,69 @@ public class Empleado extends javax.swing.JPanel {
                 btneditempleadoMouseClicked(evt);
             }
         });
-        add(btneditempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, -1, -1));
+        add(btneditempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 480, -1, -1));
 
         btnmostrarempleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnmostrar.png"))); // NOI18N
-        add(btnmostrarempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 420, -1, -1));
+        add(btnmostrarempleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, -1, -1));
+
+        Text10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Text10.setText("Usuario");
+        add(Text10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 150, -1));
+
+        sapellido_empleado1.setForeground(new java.awt.Color(102, 102, 102));
+        sapellido_empleado1.setText("Ingrese el Nombre de Usuario");
+        sapellido_empleado1.setBorder(null);
+        sapellido_empleado1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                sapellido_empleado1MousePressed(evt);
+            }
+        });
+        sapellido_empleado1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sapellido_empleado1ActionPerformed(evt);
+            }
+        });
+        sapellido_empleado1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                sapellido_empleado1KeyTyped(evt);
+            }
+        });
+        add(sapellido_empleado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 290, 30));
+
+        jSeparator11.setForeground(new java.awt.Color(51, 153, 255));
+        jSeparator11.setPreferredSize(new java.awt.Dimension(200, 10));
+        add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 290, 10));
+
+        Text13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Text13.setText("Contraseña");
+        add(Text13, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 390, 150, -1));
+
+        sapellido_empleado2.setForeground(new java.awt.Color(102, 102, 102));
+        sapellido_empleado2.setText("Ingrese la Contraseña del Empleado");
+        sapellido_empleado2.setBorder(null);
+        sapellido_empleado2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                sapellido_empleado2MousePressed(evt);
+            }
+        });
+        sapellido_empleado2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sapellido_empleado2ActionPerformed(evt);
+            }
+        });
+        sapellido_empleado2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                sapellido_empleado2KeyTyped(evt);
+            }
+        });
+        add(sapellido_empleado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 290, 30));
+
+        jSeparator14.setForeground(new java.awt.Color(51, 153, 255));
+        jSeparator14.setPreferredSize(new java.awt.Dimension(200, 10));
+        add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 290, 10));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoico5.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 620));
     }// </editor-fold>//GEN-END:initComponents
 
     private void pnombre_empleadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnombre_empleadoMousePressed
@@ -902,10 +968,36 @@ public class Empleado extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btneditempleadoMouseClicked
 
+    private void sapellido_empleado1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sapellido_empleado1MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sapellido_empleado1MousePressed
+
+    private void sapellido_empleado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sapellido_empleado1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sapellido_empleado1ActionPerformed
+
+    private void sapellido_empleado1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_sapellido_empleado1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sapellido_empleado1KeyTyped
+
+    private void sapellido_empleado2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sapellido_empleado2MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sapellido_empleado2MousePressed
+
+    private void sapellido_empleado2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sapellido_empleado2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sapellido_empleado2ActionPerformed
+
+    private void sapellido_empleado2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_sapellido_empleado2KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sapellido_empleado2KeyTyped
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Text10;
     private javax.swing.JLabel Text11;
     private javax.swing.JLabel Text12;
+    private javax.swing.JLabel Text13;
     private javax.swing.JLabel Text3;
     private javax.swing.JLabel Text4;
     private javax.swing.JLabel Text6;
@@ -921,9 +1013,12 @@ public class Empleado extends javax.swing.JPanel {
     private javax.swing.JTextField cedula_empleado;
     private javax.swing.JTextField correo_empleado;
     private javax.swing.JTextField direccion_empleado;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
+    private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
@@ -933,6 +1028,8 @@ public class Empleado extends javax.swing.JPanel {
     private javax.swing.JTextField papellido_empleado;
     private javax.swing.JTextField pnombre_empleado;
     private javax.swing.JTextField sapellido_empleado;
+    private javax.swing.JTextField sapellido_empleado1;
+    private javax.swing.JTextField sapellido_empleado2;
     private javax.swing.JTextField snombre_empleado;
     private javax.swing.JTextField telefono_empleado;
     // End of variables declaration//GEN-END:variables

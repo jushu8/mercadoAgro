@@ -68,6 +68,7 @@ public class Proveedor extends javax.swing.JPanel {
         btnbuscarprove = new javax.swing.JLabel();
         btneditprove = new javax.swing.JLabel();
         btnmostrarprove = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(750, 430));
@@ -229,7 +230,7 @@ public class Proveedor extends javax.swing.JPanel {
         add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 250, 10));
 
         btnaddprove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/addprove2.png"))); // NOI18N
-        btnaddprove.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnaddprove.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnaddprove.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnaddproveMouseClicked(evt);
@@ -238,7 +239,7 @@ public class Proveedor extends javax.swing.JPanel {
         add(btnaddprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, -1, -1));
 
         btnbuscarprove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnbuscar.png"))); // NOI18N
-        btnbuscarprove.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnbuscarprove.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnbuscarprove.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnbuscarproveMouseClicked(evt);
@@ -247,7 +248,7 @@ public class Proveedor extends javax.swing.JPanel {
         add(btnbuscarprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 380, -1, -1));
 
         btneditprove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnedit.png"))); // NOI18N
-        btneditprove.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btneditprove.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btneditprove.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btneditproveMouseClicked(evt);
@@ -256,8 +257,11 @@ public class Proveedor extends javax.swing.JPanel {
         add(btneditprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, -1, -1));
 
         btnmostrarprove.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnmostrar.png"))); // NOI18N
-        btnmostrarprove.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnmostrarprove.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(btnmostrarprove, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 380, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoico5.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 620));
     }// </editor-fold>//GEN-END:initComponents
 
     private void nit_proveedorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nit_proveedorMousePressed
@@ -560,6 +564,7 @@ public class Proveedor extends javax.swing.JPanel {
     private javax.swing.JLabel btnmostrarprove;
     private javax.swing.JTextField correo_proveedor;
     private javax.swing.JTextField direccion_proveedor;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;

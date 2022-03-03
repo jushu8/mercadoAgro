@@ -77,6 +77,7 @@ public class clientevista extends javax.swing.JPanel {
         btnbuscar = new javax.swing.JLabel();
         btneditar = new javax.swing.JLabel();
         btnmostrar = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(750, 610));
@@ -341,6 +342,9 @@ public class clientevista extends javax.swing.JPanel {
         btnmostrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btnmostrar.png"))); // NOI18N
         btnmostrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(btnmostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 410, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoico5.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 620));
     }// </editor-fold>//GEN-END:initComponents
 
     private void pnombre_clienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnombre_clienteMousePressed
@@ -924,6 +928,7 @@ public class clientevista extends javax.swing.JPanel {
     private javax.swing.JTextField cedula_cliente;
     private javax.swing.JTextField correo_cliente;
     private javax.swing.JTextField direccion_cliente;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
