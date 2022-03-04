@@ -26,58 +26,49 @@ public class Reportes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        rclientetxt = new javax.swing.JLabel();
+        rproveedortxt = new javax.swing.JLabel();
+        rproductotxt = new javax.swing.JLabel();
+        rventastxt = new javax.swing.JLabel();
+        rventasbtn = new javax.swing.JLabel();
+        rproductobtn = new javax.swing.JLabel();
+        rproveedorbtn = new javax.swing.JLabel();
+        rclientebtn = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("R.Ventas");
+        rclientetxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        rclientetxt.setText("R.Clientes");
+        getContentPane().add(rclientetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
-        jLabel2.setText("R.Empleados");
+        rproveedortxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        rproveedortxt.setText("R.Proveedores");
+        getContentPane().add(rproveedortxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
 
-        jLabel3.setText("R.Productos");
+        rproductotxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        rproductotxt.setText("R.Productos");
+        getContentPane().add(rproductotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, -1, -1));
 
-        jLabel4.setText("jLabel4");
+        rventastxt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        rventastxt.setText("R.Ventas");
+        getContentPane().add(rventastxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 260, -1, -1));
 
-        jLabel5.setText("jLabel5");
+        rventasbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rventasbtn.png"))); // NOI18N
+        getContentPane().add(rventasbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 180, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(282, 282, 282)
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel1)
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3)))
-                .addContainerGap(382, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
-                .addGap(83, 83, 83)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addContainerGap(446, Short.MAX_VALUE))
-        );
+        rproductobtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rproductosbtn.png"))); // NOI18N
+        getContentPane().add(rproductobtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, -1, -1));
+
+        rproveedorbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rproveedoresbtn.png"))); // NOI18N
+        getContentPane().add(rproveedorbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
+
+        rclientebtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rclientebtn.png"))); // NOI18N
+        getContentPane().add(rclientebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondoico5.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 610));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -119,9 +110,13 @@ public class Reportes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel rclientebtn;
+    private javax.swing.JLabel rclientetxt;
+    private javax.swing.JLabel rproductobtn;
+    private javax.swing.JLabel rproductotxt;
+    private javax.swing.JLabel rproveedorbtn;
+    private javax.swing.JLabel rproveedortxt;
+    private javax.swing.JLabel rventasbtn;
+    private javax.swing.JLabel rventastxt;
     // End of variables declaration//GEN-END:variables
 }
